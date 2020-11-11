@@ -21,69 +21,109 @@
                     <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg">
                     </a>
                 </div>              
-            </div> 
-            Le délice des sens
-
-Entrées
-Tartare de thon
-Assaisonné au yuzu
-25€
-
-Bouchée de homard croustillant 
-Et sa farandole de petits légumes
-35€
-
-Velouté de cèpes 
-Aux truffes
-20€
-        
-Plats
-Poulet rôti aux herbes de Provence 
-Et sa crème de truffe
-40€
-
-Langouste rôtie 
-Et ses légumes de saison
-35€
-
-Côte de boeuf Angus 
-Et sa purée de panais
-44€
-
-Desserts
-Farandole de desserts
-Du chef
-18€
-
-Crème brulée 
-Revisitée
-22€
-
-Tiramisu 
-À la noisette
-23€
-                    
+            </div>                        
         </header>
+
+        <!--section concernant les entrées-->
         <section class="restau">
-        	<form method="post">
-                <div><h2>Entrée</h2>                    
+
+        	<form method="post" class="sens">
+                <section class="entree">
+                    <h2>Entrées</h2>
+                    <ul class="debut">
+                       <li class="menu-entree">
+                            <div class="enonce">
+                                <p>Tartare de thon<br>
+                                <span>Assaisonné au yusu</span>
+                                25€</p>       
+                            </div>
+                            <div class="">partie masquée avant hover</div>                     
+                        </li> 
+                        <li class="menu-">
+                            <p>Bouchée de homard croustillant<br>
+                            <span>Et sa farandole de petits légumes</span>
+                            35€</p>
+                        </li> 
+                        <li class="menu-">
+                            <p>Velouté de cèpes<br>
+                            <span>Aux truffes</span>
+                            20€
+                            </p>                            
+                        </li>                     
+                    </ul>
+                </section>
+
+               <!--section conernant les plats-->
+                <section class="plat">
+                    <h2>Plats</h2>
+                    <ul class="milieu">
+                       <li class="menu-plat">
+                            <div class="enonce">
+                                <p>Poulet rôti aux herbes de provence<br>
+                                <span>Et sa crème de truffe</span>
+                                40€</p>       
+                            </div>
+                            <div class="">partie masquée avant hover</div>                     
+                        </li> 
+                        <li class="menu-plat">
+                            <p>Langouste rôtie<br>
+                            <span>Et ses légumes de saison</span>
+                            35€</p>
+                        </li> 
+                        <li class="menu-plat">
+                            <p>Côte de boeuf Angus<br>
+                            <span>Et sa purée de panais</span>
+                            44€
+                            </p>                            
+                        </li>                     
+                    </ul>
+                </section>
+
+                <!--concernant les dessert -->
+                <section class="dessert">
+                    <h2>Desserts</h2>
+                    <ul class="fin">
+                       <li class="menu-desset">
+                            <div class="enonce">
+                                <p>Farandole de desserts<br>
+                                <span>Du Chef</span>
+                                18€€</p>       
+                            </div>
+                            <div class="">partie masquée avant hover</div>                     
+                        </li> 
+                        <li class="menu-desset">
+                            <p>Crème brûlée<br>
+                            <span>evisitéeR</span>
+                            22€</p>
+                        </li> 
+                        <li class="menu-desset">
+                            <p>Tiramisu<br>
+                            <span>A la noisette</span>
+                            23€</p>                            
+                        </li>                     
+                    </ul>
+                </section>
+
+                <section>
+                    <div class="choix-premier">   
+                    <label><i class="fas fa-map-marker-alt"></i></label>
+                    <input type="search" value="Marseille, France" id="gsearch">
+                    <label><i class="fas fa-search"></i></label>
+                    <button class="button bouton" type="submit">Commander</button>
                 </div>
 
-                <div>
-                    
-                </div>
-
-                <div>
-                    <h2>Dessert</h2>
-
-                </div>                
+                </section>                               
             </form>        	
-        </section>
-
-    
+        </section>    
         <!--========================= Pied de Page====================   -->
-        <footer>
-            <section>                
+        <section class="pied">
+                <ul class="menu-foot">
+                    <img src="images/ohmyfood.png" id="logo" alt="logo du site ohmyfood"/>
+                    <li><a href=""><i class="fas fa-utensils"></i> Proposer un restaurant</a></li>
+                    <li><a href=""><i class="fas fa-handshake"></i> Devenir partenaire</a></li>
+                    <li><a href=""> Mentions légales</a></li>
+                    <li><a href=""> Contact</a></li>
+                </ul>
             </section>
         </footer>       
     </div>

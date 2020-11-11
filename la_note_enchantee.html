@@ -24,81 +24,117 @@
                 </div>          
             </div>                                
         </header>
+
         <section class="restau">
-        	<form method="post">
-                <div>
-                    <h2>Entrée</h2>                  
+
+            <!--formulaire pour envoyer la commande-->
+        	<form method="post" class="enchantee">
+
+                <!--section concernant les entrées-->
+                <section class="entree">
+                    <h2>Entrées</h2>
+                    <ul class="debut">
+                       <li class="menu-entree">
+                            <div class="enonce">
+                                <p>Ravioles de foie gras<br>
+                                <span>Accompagnés de leur crème à la truffe</span>
+                                25€</p>       
+                            </div>
+                            <div class="">partie masquée avant hover</div>                     
+                        </li> 
+                        <li class="menu-entree">
+                            <p>caviar oscière<br>
+                            <span>Sur blini à la farine de blé noir</span>
+                            35€</p>
+                        </li> 
+                        <li class="menu-entree">
+                            <p>Homard et espuma de potiron<br>
+                            <span>Mariné aux zestes d'orange</span>
+                            20€</p>                            
+                        </li> 
+                        <li>
+                            <p>Foie gras de canard cuit entier<br>
+                                <span>Confiture de figue et pain toasté</span>
+                                 35€                               
+                            </p>
+                        </li>                    
+                    </ul>
+                </section>
+
+                <!--section concernant les plats-->
+                <section class="plat">
+                    <h2>Plats</h2>
+                    <ul class="milieu">
+                       <li class="menu-plat">
+                            <div class="enonce">
+                                <p>Noix de coquilles Saint-Jacques<br>
+                                <span>Sur lit de purée de céleri-rave</span>
+                                40€</p>       
+                            </div>
+                            <div class="">partie masquée avant hover</div>                     
+                        </li> 
+                        <li class="menu-plat">
+                            <p>Langouste poêlée<br>
+                            <span>Purée de patate douce</span>
+                            35€</p>
+                        </li> 
+                        <li class="menu-plat">
+                            <p>Mijoté de queue de boeuf<br>
+                            <span>Et riz sauvage aux zestes de citron</span>
+                            44€</p>                            
+                        </li>                     
+                    </ul>
+                </section>
+
+                <!--section concernant les desserts-->
+                <section class="dessert">
+                    <h2>Desserts</h2>
+                    <ul class="fin">
+                        <li class="menu-dessert">
+                            <p>Macaron noisette et chocolat<br>
+                                <span>Glace au caramel brun et sel de Guérande</span>
+                                18€                                
+                            </p>                            
+                        </li>
+                        <li class="menu-dessert">
+                            <p>Baba au rhum revisité<br>
+                                <span>Avec son coulis de citron</span>
+                                22€                                
+                            </p>                            
+                        </li>
+                        <li class="menu-dessert">
+                            <p>tarte au citron meringuée<br>
+                                <span>Destructurée</span>
+                                23€                                
+                            </p>                            
+                        </li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <div class="choix-premier">   
+                    <label><i class="fas fa-map-marker-alt"></i></label>
+                    <input type="search" value="Marseille, France" id="gsearch">
+                    <label><i class="fas fa-search"></i></label>
+                    <button class="button bouton" type="submit">Commander</button>
                 </div>
 
-                <div class="menu-entree">
-                    <div class="enonce">
-                        <p>Ravioles de foie gras<br>
-                        <span>Accompagnés de leur crème à la truffe</span>
-                        25€</p>
-                    </div>
-                    <div class="icone">
-                        <i class="far fa-check-square"></i>
-                    </div>                    
-                </div>
-
-                <div>
-                    <h2>Dessert</h2>
-
-                </div>                
+                </section>
             </form> 
-La note enchantée
 
-Entrées
-Ravioles de foie gras 
-Accompagnés de leur crème à la truffe
-25€
-
-Caviar osciètre 
-Sur blini à la farine de blé noir
-35€
-
-Homard et espuma de potiron
-Mariné aux zestes d'orange
-20€
-
-Foie gras de canard cuit entier
-Confiture de figue et pain toasté
-35€
-        
-Plats
-Noix de coquilles Saint-Jacques
-Sur lit de purée de céleri-rave
-40€
-
-Langoustine poêlée
-Purée de patate douce
-35€
-
-Mijoté de queue de boeuf 
-Et riz sauvage aux zestes de citron
-44€
-
-Desserts
-Macaron noisette et chocolat
-Glace au caramel brun et sel de Guérande
-18€
-
-Baba au rhum revisité 
-Avec son coulis de citron
-22€
-
-Tarte au citron meringuée 
-Déstructurée
-23€
-       	
         </section>
-
     
         <!--========================= Pied de Page====================   -->
-        <footer>
-            <section>                
+        <section class="pied">
+                <ul class="menu-foot">
+                    <img src="images/ohmyfood.png" id="logo" alt="logo du site ohmyfood"/>
+                    <li><a href=""><i class="fas fa-utensils"></i> Proposer un restaurant</a></li>
+                    <li><a href=""><i class="fas fa-handshake"></i> Devenir partenaire</a></li>
+                    <li><a href=""> Mentions légales</a></li>
+                    <li><a href=""> Contact</a></li>
+                </ul>
             </section>
-        </footer>       
+        </footer>     
     </div>
 </body>
 </html>

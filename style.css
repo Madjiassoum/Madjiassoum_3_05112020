@@ -1,105 +1,52 @@
-html, body{
+body{
 	background-color: green;
   margin-bottom: auto;
- font-family: "romantic"; 
+  font-family: "romantic"; 
   
 }
 .contain-page{
-  display: flex;
+  display: block;
+  max-width: 677px;
   flex-direction: column;
   margin: auto;
-  margin-top: 0px;
-  width: auto;
+  padding-top: 0px;
   background-color: gray;
-  align-self: center;
+
+}
+
+header{
   justify-content: center;
+  height: auto;
+  background-color: yellow;
 }
 .main-menu{
+  display: flex;flex-direction: row;
+}
+.abc{
+  position: absolute;
   display: flex;
   flex-direction: row;
 }
-.menu-entree{
-  display: flex;
-  background-color: yellow;
-}
-.menu-entree p{
-  line-height: 20px;
-  font-weight: bold;
-  font-size: 1.4rem;
-  display: inline-block;
-  border-collapse: collapse;
+nav ul{
+  transition-duration: 4s;
 
-
-}
-header{
-  justify-content: center;
-  height: 160px;
-  background-color: yellow;
 }
 header img{
-  margin: 0px 50px 0px 150px;
-  width: 900px;
+  object-fit: cover;
+  height: 170px;
+}
+.image_menu img{
+  width: 200px;
   height: 150px;
-  line-height: 30px;
-  color: red;
-}
-.menu-entree p span{
-  font-size: 0.8em;
-  font-weight: normal;
-  font-family: century;
-  margin-right: 35px;
-}
-.menu-entree .enonce{
-  background-color: #FFFFFF;
-}
-.menu-entree .icone{
-  display: none;
-  position: relative;
-  left: -20px;
-  background-color: green;
-  padding: 10px 5px 10px 5px;
-  margin-left: 20px;
-  border-bottom-right-radius: 15px;
-  border-top-right-radius: 15px;
-}
-.menu-entree .icone:hover{
-  display: flex;
-  margin-right: 20px;
 }
 
 .fa-check-square{
   font-size: 50px;
   color: blue;
 }
-.restau .menu-entree{
-  display: flex;
-  flex-direction: row;
-  text-overflow: ellipsis;
 
-  
-}
-/*
-.restau{
-  display: flex;
-  flex-direction: row;
-  height: auto;
-}
-.restau_menu{
-  display: flex;
-  margin-left: 20px;
-  width: 300px;
-}
-.restau_menu h2{
-  text-align: center;
-
-}
-*/
-.image_menu img{
-  object-fit: cover;
-  border: 1px gray solid;
-  width: 250px;
-  height: 200px;
-
+footer{
+  background-color: green;
 }
 
 
@@ -116,12 +63,130 @@ header img{
 
 
 /* En dessous de TABLETTES donc les mobiles */
-@media screen and (max-width: 677px){
+@media screen and (max-width: 425px){
 	body{
-		background-color: blue;
+		background-color: #fff;
+    max-width: 677px;
 	}
-	
+  .contain-page{
+    display: block;
+    margin: auto;
+    height: auto;
   }
+  /* partie en-tête page d'accueil*/
+  header p{
+    justify-content: center;
+  }	
+  header img{
+    margin: auto;
+    height: 35px;
+    padding-left: 50px; 
+    
+    margin: 5px 20px 5px 40px;
+  }
+  
+  .fa-arrow-left{
+    display: none;
+  }
+  
+
+  /* Choix de l'endroit */
+  .choix-endroit{
+    height: 190px;
+    background-color: #AF0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .localise{
+    position: absolute;
+    top: 65px;
+    background-color: #F2F2F2;
+    width: 390px;
+    height: ;
+    text-align: center;
+  }
+  .choix-endroit button{
+    background-color: pink;
+    margin-top: 35px;
+    border-radius: 15px;
+    border: none;
+    line-height: 20px;
+    font-size: 15px;
+    padding: 3px 5px 3px 5px;
+  }
+  
+  .choix-endroit h2, p{
+
+    display: flex;
+    width: 250px;
+    position: relative;
+    align-items: center;
+  }
+  .choix-endroit p{
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 85px; 
+  }
+  /* Partie fonctionnement */
+  .fonction{
+    position: absolute;
+    top: 260px;
+  }
+  .fonction h2{
+    margin-left: 45px;
+  }
+  .fonction .fonctionnement{
+    display: flex;
+    flex-direction: column;
+    margin-left: 35px;
+  }
+  .fonctionnement li.info{    
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(230,240,245);
+    margin-bottom: 10px;
+    padding: 15px 5px 0px 50px;
+  }
+  .fonctionnement .info .fa-mobile-alt, .fa-store, .fa-bars{
+    margin-right: 15px;
+    color: gray;
+  }
+  .main-menu{
+    background-color: green;
+    margin: 15%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 470px;
+  }
+  footer{
+    position: absolute;
+    width: 400px;
+    margin: auto;
+    background-color: yellow;
+    top: 1530px;
+  }
+  footer .menu-pied{
+    padding-top: 0px;
+    margin: auto;
+    padding-left: 20px;
+    width: 380px;
+    color: white;
+    background-color: #000A10;
+  }
+
+  .fa-utensils, .fa-handshake{
+    margin-right: 5px;
+  }
+  .menu-pied .pied{
+    list-style-type: none;
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+}
 
   @media screen and (orientation: landscape) {
   body {
