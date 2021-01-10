@@ -1,0 +1,11 @@
+{
+  "name": "oui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "dart-sass --watch ./sass/style.scss:./dart-sass/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

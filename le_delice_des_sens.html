@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="Fr-fr">
+<head>
+    <meta charset="utf-8" />
+    <title>Le délice des sens | Ohmyfood</title>
+    <link rel="stylesheet" href="sass/style.css"/>
+    <link rel="shortcut icon" type="image/png" href="images/omf.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="fontawesome-free-5.14.0-web/css/all.css">            
+    <link rel="stylesheet" media="screen and (max-width: 1280px)" href="style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+</head>    
+<body>
+
+    <!-- container de la page -->
+    <div class="contain-page">
+        <!--En-tête de la page contenant le logo-->
+        <header class="header">
+            <a href="index.html"><i class="fas fa-arrow-left"></i></a>              
+            <img src="images/ohmyfood.png" id="logo" alt="logo du site ohmyfood"/>                              
+        </header> 
+        <!-- Nom du restaurant et image menu-->
+        <footer class="menu">                  
+            <div class="restau_menu">                                         
+                <div class="image_menu">
+                    <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="menu restaurant">
+                </div> 
+                <div class="lds-circle"></div>                                       
+            </div>                        
+        </footer>
+        
+        <!--contenair de Menu le Délice des sens-->
+        <div class="loader-frame">
+            <span>Patientez svp...<br></span>
+            <div class="loader1" id="loader1"></div>
+            <div class="loader2" id="loader2"></div>
+            <div class="loader3" id="loader3"></div>
+        </div>
+
+        <main id="sens">
+
+            <!---formulaire pour envoyer la commande-->
+            <form method="post" action="#" class="sens">
+
+                <!--Titre ou nom du restaurant -->
+                <section class="titre">
+             
+                    <div class="restau_menu_title">
+                        <h1>La palette du goût</h1>                
+                    </div>                                                	        		
+                    <button class="btn btn_white">                        
+                        <i class="fas fa-heart"></i>
+                    </button>
+                </section>
+
+                <!--section concernant les entrées-->
+                <section class="sousmenu">                        
+                    <h2><span>Entr</span>ées</h2>
+                    <div class="container">                    
+                        <article class="de_mi_fi">                    
+                            <div class="compose1">                                
+                                <h5>Tartare de thon</h5>
+                                <p class="compose1_description">Assaisonné au yusu</p>
+                                <p class="compose1_prix">25€</p>                        
+                            </div>        
+                            <div class="check">
+                                <i class="fas fa-check"></i>
+                            </div>                                    
+                        </article>
+
+                        <article class="de_mi_fi">                                
+                            <div class="compose1">                                    
+                                <h5>Bouchée de homard croustillant</h5>
+                                <p class="compose1_description">Et sa farandole de petits légumes</p>
+                                <p class="compose1_prix" >35€</p>                                
+                            </div>
+                            <div class="check">
+                                <i class="fas fa-check"></i>
+                            </div>                                
+                        </article>
+
+                        <article class="de_mi_fi">                                
+                            <div class="compose1">                                    
+                                <h5>Velouté de cèpes</h5>
+                                <p class="compose1_description">Aux truffes</p>
+                                <p class="compose1_prix">20€</p>                                    
+                            </div>
+                            <div class="check">
+                                <i class="fas fa-check"></i>
+                            </div>                                                            
+                        </article>         
+                    </div>
+                </section>
+
+                <!--section conernant les plats-->
+                <section class="sousmenu">
+                    <h2><span>Plat</span>s</h2>
+                    <div class="container">                    
+                        <article class="de_mi_fi">                            
+                            <div class="compose1">                                    
+                                <h5>Poulet rôti aux herbes de provence</h5>
+                                <p class="compose1_description">Et sa crème de truffe</p>
+                                <p class="compose1_prix">20€</p>                                           
+                            </div>
+                            <div class="check">
+                                <i class="fas fa-check"></i>
+                            </div>                                                    
+                        </article> 
+
+                        <article class="de_mi_fi">                                
+                            <div class="compose1">                                    
+                                <h5>Langouste rôtie</h5>
+                                <p class="compose1_description">Et ses légumes de saison</p>
+                                <p class="compose1_prix">35€</p>                                    
+                            </div>
+                            <div class="check">
+                                <i class="fas fa-check"></i>
+                            </div>                            
+                        </article>
+
+                        <article class="de_mi_fi">                                
+                            <div class="compose1">                                    
+                                <h5>Côte de boeuf Angus</h5>
+                                <p class="compose1_description">Et sa purée de panais</p> 
+                                <p class="compose1_prix">44€</p>                                    
+                            </div>
+                            <div class="check">
+                                <i class="fas fa-check"></i>
+                            </div>                                                            
+                        </article>                     
+                    </div>
+                </section>
+
+                <!--concernant les dessert -->
+                <section class="sousmenu">
+                    <h2><span>Dess</span>erts</h2>
+                    <div class="container">                    
+                        <article class="de_mi_fi">                                
+                            <div class="compose1">                                
+                                <h5>Farandole de desserts</h5>
+                                <p class="compose1_description">Du Chef</p>
+                                <p class="compose1_prix">18€€</p>                                          
+                            </div>
+                            <div class="check">
+                                <i class="fas fa-check"></i>
+                            </div>                                                    
+                        </article> 
+
+                        <article class="de_mi_fi">                                    
+                            <div class="compose1">                            
+                                <h5>Crème brûlée</h5>
+                                <p class="compose1_description">RevisitéeR</p>
+                                <p class="compose1_prix"> 22€</p>                                    
+                            </div>
+                            <div class="check">
+                                <i class="fas fa-check"></i>
+                            </div>                                    
+                        </article>
+
+                        <article class="de_mi_fi">                                    
+                            <div class="compose1">                                    
+                                <h5>Tiramisu</h5>
+                                <p class="compose1_description">A la noisette</p>
+                                <p class="compose1_prix">23€</p>                                 
+                            </div>
+                            <div class="check">
+                                <i class="fas fa-check"></i>
+                            </div>                                                             
+                        </article>
+                    </div>	                     
+                </section> 
+                                                
+                    <button class="btn">Commander</button> 
+                          
+
+            </form> 
+                <!--========================= Pied de Page====================   -->
+                <section class="footer">
+                    <h2>Ohmyfood</h2>        	
+                    <ul class="pied">
+                        <li><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
+                        <li><a href="#"><i class="fas fa-handshake"></i>Devenir partenaire</a></li>
+                        <li><a href="#"> Mentions légales</a></li>
+                        <li><a href="mailto:message@ohmyfood.com"> Contact</a></li>
+                    </ul>
+                </section>    	             
+        </main> 
+            
+    </div>
+</body>
+</html>
