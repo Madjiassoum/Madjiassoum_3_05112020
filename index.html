@@ -12,31 +12,42 @@
 </head>    
 <body>
 
+    <!-- Loader de la page d'accueil-->
+    <div class="loader-frame">            
+        <div class="loader1" id="loader1">
+            <div class="loader2" id="loader2">
+                <div class="loader3" id="loader3"><span>Patientez svp...</span></div>
+            </div>
+        </div>
+    </div>
+
     <!-- container de la page -->
     <div class="contain-page">
 
         <!--En-tête de la page contenant le logo-->
-        <header class="header">             
+        <section class="header">             
             	<img src="images/ohmyfood.png" id="logo" alt="logo du site ohmyfood"/>                                
-        </header>      
+        </section>
+            
 
     	<!--Localiser un lieu-->
-        <section class="choix-endroit">
-            <form method="post" action="#" class="recherche-ville">           
+        <section class="endroit">                 
                <div class="search">
                     <span class="search_icon">
                         <i class="fas fa-map-marker-alt"></i>                    
                         <span class="visually-hidden">Paris, Belleville</span>
                     </span>                
                 </div>
-
                 <h1>Réservez le menu qui vous convient</h1>
                 <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                <button class="btn"><span>Explorer nos restaurants</span></button>  
-            </form>             
+                
+                    <button class="btn">
+                       <span> Explorer nos restaurants</span>
+                    </button>
+                       
         </section>
 
-        <section class="fonction" >
+        <section class="fonction">
         	<h2>Fonctionnement</h2>
         	<ul class="fonctionnement">
         		<li class="info"> 
@@ -59,7 +70,7 @@
                     
     	<section class="main-menu">
             <h2>Restaurants</h2>
-            <div class="container-menu">
+            <div class="container">
 	        	<article class="restau_menu">
                     <p class="nouveau">Nouveau</p>				
                     <a href="la_palette_du_gout.html">
@@ -72,8 +83,9 @@
                             <h3>La palette du goût</h3>
                             <p>Ménilmontant</p>
                         </div>                                                	        		
-                        <button class="btn btn_white">                        
-                            <i class="fas fa-heart"></i>
+                        <button class="btn_white">                        
+                            <span class="far fa-heart"></span>
+                            <i class="fas fa-heart"></i>                            
                         </button>
                     </div>                                           
 	        	</article>
@@ -90,7 +102,8 @@
                             <h3>La note enchantée</h3> 
                             <p>Charonne</p>   
                         </div>                                                	        		
-                        <button class="btn btn_white">                        
+                        <button class="btn_white">                        
+                            <span class="far fa-heart"></span>
                             <i class="fas fa-heart"></i>                            
                         </button>
                     </div>                                    
@@ -107,8 +120,9 @@
                             <h3>A la française</h3> 
                             <p>Cité Rouge</p>   
                         </div>                                                	        		
-                        <button class="btn btn_white">                        
-                            <i class="fas fa-heart"></i>                            
+                        <button class="btn_white">                        
+                            <span class="far fa-heart"></span>  
+                            <i class="fas fa-heart"></i>                          
                         </button>
                     </div>                                     	        		 
 	        	</article>
@@ -124,8 +138,9 @@
                             <h3>Le Délice des sens</h3> 
                             <p>Folie-Méricourt</p>   
                         </div>                                                	        		
-                        <button class="btn btn_white">                        
-                            <i class="fas fa-heart"></i>                            
+                        <button class="btn_white">                        
+                            <span class="far fa-heart"></span>
+                            <i class="fas fa-heart"></i>                           
                         </button>
                     </div>       
                 </article>
@@ -134,15 +149,13 @@
 
         <!-- Pied de Page   -->  
         <section class="footer">
-            <h2>Ohmyfood</h2>
-            <nav>          	
-                <ul class="pied">
-                    <li><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
-                    <li><a href="#"><i class="fas fa-handshake"></i>Devenir partenaire</a></li>
-                    <li><a href="#"> Mentions légales</a></li>
-                    <li><a href="mailto:message@ohmyfood.com"> Contact</a></li>
-                </ul>
-            </nav>
+            <h2>Ohmyfood</h2>                      	
+            <ul class="container">
+                <li><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
+                <li><a href="#"><i class="fas fa-handshake"></i>Devenir partenaire</a></li>
+                <li><a href="#"> Mentions légales</a></li>
+                <li><a href="mailto:message@ohmyfood.com"> Contact</a></li>
+            </ul>            
         </section>              
     </div>
 </body>
