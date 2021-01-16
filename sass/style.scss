@@ -14,9 +14,66 @@
         margin: auto;  
         padding: 0px;
         box-sizing: border-box;
-        background-color: rgb(238, 108, 108);
+        background-color: rgb(121, 7, 7);
+        .restaurant {
+            width: 100%;
+        }
+
+        .footer, .fonction, .endroit, .main-menu, .titre, .sousmenu, .divbtn {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            h2{
+                text-align: left;
+                margin-left: 10px;
+            }
+        }
+
+        .main-menu{
+            margin-bottom: 20px;
+            height: auto;
+            .container{
+                display: flex;
+                flex-direction: column;
+                background-color: blue;
+                padding: 0;
+                height: auto;
+                .restau{
+                    width: 100%;
+                    height: 180px;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    background-color: green;
+                    .nouveau {
+                        position: relative;
+                        left: 70%;
+                        top: 50px;
+                    }
+                }
+            }
+        }
+        .footer{
+            h2{
+                margin-left: 5%;
+            }
+            .container{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                margin-left: -10px;
+                li {
+                    margin: 5px 0px;
+                }
+            }
+
+        }
+
+
+
     }
 }
+
+
 /*
     .titre, .loader-frame, .header, .main-menu, .fonction, .sousmenu, .menu, .footer, .choix-endroit{
         width: 100%;
@@ -719,8 +776,8 @@
 
 
 body{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     background-color: #fff;
 }
 
@@ -734,16 +791,22 @@ $backg-secondary: rgba(190, 190, 190, 0.5); /* couleur fond après hover */
 $shadow-bouton: 1px 5px 5px rgba(116, 15, 15, 1);/* ombre des box boutons*/
 $shadow-txt: 1px 5px 5px gray; /* ombre de textes*/
 $color-button: #FF79DA; /* zone de recherche villes */
+$couleur-backg: rgba(242, 242, 242, 0.1);
 .contain-page{
     display: block;
-    width: 95%;
+    max-width: 1280px;
+    height: auto;
     margin: auto;
-    padding-bottom: 5px;
-    justify-content: center;
-    align-items: center;
     top: 5px; 
     box-sizing: border-box;
+    background-color: $couleur-backg;
+    .restaurant{
+        background-color: green;
+        width: 100%;
+    }
 }
+
+
 
 .loader-frame{
     display: none;
@@ -822,11 +885,11 @@ $color-button: #FF79DA; /* zone de recherche villes */
 
 .header, .endroit, .titre, .fonction, .main-menu, .footer, .menu, .sousmenu, .divbtn {
     width: 100%;
-    margin: 0;
+    margin: 10px 0px 10px 0px;
 }
 h2{
     text-align: left;
-    margin: 10px 0px 15px 30px;
+    margin-left: 10%;
     span{
         display: inline;
         padding-bottom: 8px;
@@ -845,22 +908,33 @@ h2{
     &_left{
         width: 80%;
         margin-left: 25px;
-        padding-bottom: 0;
+        padding: 0;
         font-size: 1.2em;
+        h1{
+            margin: 0;
+        }
     }
     &_right{
         align-items: center;
         width: 15%;
-
+        .far{
+            font-size: 2.5em;
+        }
+        .fas{
+            display: none;
+            font-size: 2.5em;
+        }
     }
 }
+
 .menu{
+    display: flex;
     margin-bottom: 10px; 
     img{
         display: block;
         height: 180px;
         object-fit: cover;
-        width: 99%;
+        width: 98%;
         margin: auto;        
     }
 }
@@ -868,17 +942,22 @@ h2{
 
 .header{
     padding-top: 10px;
-    width: 100%;
+    width: 80%;
     margin: auto;
+    height: 50px;
     display: flex;
+    justify-content: center;
+    a{
+        text-decoration: none;
+    }
     .fa-arrow-left{
+        position: relative;
+        display: flex;
+        height: 40px;
+        font-size: 2em;
         color: #000;
-        height: auto;
-        position: absolute;
-        align-items: center;        
-        margin-left: 10%;
-        font-size: 1.2em;       
-        width: 20px;        
+        align-items: center;       
+        width: 40px;               
     }
     img{
         display: flex;
@@ -886,21 +965,36 @@ h2{
         align-items: center;
         justify-content: center;
         width: 45%;
+        height: 50px;
     }
 }
 .endroit{
-    p, h1 {
+    flex-direction: column;
+    padding-bottom: 0px;
+    h1 {
         text-align: center;
+        margin-bottom: 0px;
+        font-size: 2em;
+        padding: 0px 10%;
+        
     }
+    p {
+        text-align: center;
+        font-size: 1.1em;
+    }
+
     .search{
         padding: 5px 0px;
         text-align: center;
-        border-top: 3px solid rgba(190, 176, 176, 0.6);
-        background-color: rgba(190, 176, 176, 0.1);
+        border-top: 3px solid rgba(248, 245, 245, 0.6);
+        background-color: rgba(248, 245, 245, 0.3);
     }
-    .btn{        
+    .btn{
+        margin: 15px 0px;      
         justify-content: center;
         width: 100%;
+        background-color: $couleur-backg;
+        border: none;
         span{
             align-items:center;
             justify-content:center;
@@ -921,64 +1015,81 @@ h2{
 }
 .fonction, .main-menu, .sousmenu, .footer, .endroit{
     display: flex;
-    flex-direction: column;
 }
 
 
 
 
 $color-info: rgba(240, 232, 232, 0.7);  
-.fonction{   
-    .fonctionnement{
+.fonction{
+    display: flex;
+    height: auto;  
+    flex-direction: column;
+    h2{
+        margin: 0;
+        margin-left: 10%;
+    }
+    .container{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;   
         .info{
-            display: inline-block;
-            justify-content: space-around;
+            display: flex;
             margin-right: 5%;
-            margin-bottom: 10px;
+            padding: 5px 10px;
             background-color: $color-info;
             opacity: 0.7;
-            width: 280px;
+            width: 260px;
             line-height: 1.1em;
             font-size: 1.1em;
             border-radius: 25px;
-            padding: 5px 5px 5px 5px;       
+            padding: 8px 5px 5px 5px;       
             margin-bottom: 10px;           
             list-style-type: none;
-            .style-type{   
-                position: relative;    
-                width: 20px;
-                height: 20px;
-                margin-left: -10px;
-                margin-right: 10px;                    
+            .filter-option__label{
+                display: flex;
+                justify-content: flex-end;
+                margin-left: 10px;
+                margin-right: -10px;
+            }
+            .style-type{
+                display: flex;
+                justify-content: center;               
+                width: 25px;
+                height: 25px; 
+                position: relative;                  
                 color: white;
-                font-size: 0.7em;                    
-                background-color: #7D298D;
-                padding: 1px 0px 1px 10px;
+                margin-left: -10px;
+                font-size: 0.8em;
+                padding: 1px;                                       
+                background-color: #7D298D;   
                 border-radius: 50%;
             }
             .icon-gray{
-                margin-right: 5%;
+                margin: 0px 10px 0px 20px;
                 color: gray;
             }
             .icon-indigo{
                 color: #7D298D;
-                margin-right: 5%;
+                margin: 0px 10px 0px 20px;
             }
         }
     }
 }
 
 .main-menu{
+    flex-direction: column;
+    h2{
+        margin: 0;
+        margin-left: 10%;
+    }
     .container{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        .restau_menu{
+        .restau {
             width: 40%;
             justify-content: space-between;
             margin-right: 5%;
@@ -994,6 +1105,7 @@ $color-info: rgba(240, 232, 232, 0.7);
                 background-color: $color-tertiaire;
                 color: darken($color-tertiaire, 30%);
                 padding: 5px 5px;
+                border-radius: 2px;
             }      
             .image_menu{
                 img{
@@ -1008,13 +1120,14 @@ $color-info: rgba(240, 232, 232, 0.7);
             }
         }
     }
-    .container-titre{
+    .restau_titre{
         display: flex;
         width: 100%;
         padding-bottom: 5px;
         border-bottom-right-radius: 20px;
         border-bottom-left-radius: 20px;
-        .restau_menu_title{
+        background-color: rgba(190, 190, 190, .1);
+        .g-title{
             width: 85%;            
             margin-left: 20px;
             p, h3{
@@ -1023,19 +1136,33 @@ $color-info: rgba(240, 232, 232, 0.7);
             }
         }
         .btn_white {
+            border: none;
+            background-color: rgba(190, 190, 190, .01);
+            .far{
+                font-size: 2em;
+            }
             .fas{
                 display: none;
+                font-size: 2em;
             }
         }
     }
 }
 .footer{
+    display: flex;
+    flex-direction: column;
     background-color: rgba(0, 0, 0, 0.5);
     padding-bottom: 10px;
+    h2{
+        margin: auto;
+        font-size: 2em;
+        color: #fff;
+        letter-spacing: 5px;
+    }
     .container{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         li{
             list-style-type: none;            
         }
@@ -1043,6 +1170,7 @@ $color-info: rgba(240, 232, 232, 0.7);
             color: #fff;
             display: inline-block;
             text-decoration: none;
+            font-size: 1.2em;
         }
         .fas{
             margin-right: 10px;
@@ -1052,47 +1180,43 @@ $color-info: rgba(240, 232, 232, 0.7);
 }
 
 
-.restaurant{
-    margin-top: 5px;
-    position: relative;
-    margin: auto;
+
+.divbtn{
     width: 100%;
-    background-color: rgba(233, 224, 224, 1);
-    .divbtn{
-        width: 100%;
-        display: flex;
-        .btn{
-            margin: auto;
-            align-items:center;
-            justify-content:center;
-            cursor: pointer;
-            position: relative;
-            color: #fff;
-            border-radius: 20px;
-            font-weight: bold;
-            line-height: 1em;
-            padding: 5px 15px;
-            background: -webkit-linear-gradient(#ecb1d8, #b92788, #970265);
-            background: -moz-linear-gradient(#ecb1d8, #b92788, #970265);
-            background: -o-linear-gradient(#ecb1d8, #b92788, #970265);
-            background: linear-gradient(#ecb1d8, #b92788, #970265);
-        }
+    display: flex;
+    margin-bottom: 10px;
+    .btn{
+        margin: auto;
+        align-items:center;
+        justify-content:center;
+        cursor: pointer;
+        position: relative;
+        color: #fff;
+        border-radius: 20px;
+        font-weight: bold;
+        line-height: 1em;
+        padding: 5px 15px;
+        background: -webkit-linear-gradient(#ecb1d8, #b92788, #970265);
+        background: -moz-linear-gradient(#ecb1d8, #b92788, #970265);
+        background: -o-linear-gradient(#ecb1d8, #b92788, #970265);
+        background: linear-gradient(#ecb1d8, #b92788, #970265);
     }
-    .sousmenu, .footer{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 20px;
-        h2{
-            text-align: center;
-        }
-        .container{
-            width: 95%;
+}
+.sousmenu{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    h2{
+        text-align: left;
+        margin-left: 20px;
+    }
+    .container{
+        width: 95%;
+        margin: auto;
+        .plat{
             margin: auto;
-            .plat{
-                margin: auto;
-                margin-bottom: 20px;
-            }
+            margin-bottom: 20px;
         }
     }
 }
@@ -1159,90 +1283,10 @@ $color-info: rgba(240, 232, 232, 0.7);
     }
 }
 /*
-.check{
-    display: flex;                
-    width: 50px;
-    height: 55px;
-    align-items: center;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background-color: rgba(19, 59, 235, 0.692);
-    margin: 0px 5px 10px 15px;
-    transition: transform 330ms ease;
-    .fa-check{            
-        color: blue;
-        background-color: white;
-        padding: 5px;    
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        font-size: 0.7em;        
-    }
-}
 
 */
 
-
-
-
-/*
-
-.
-/*
-.       :hover{
-            text-shadow: 2px 2px 3px #000;
-        }
-        a{
-            color: #fff;
-        }
-    }
-}   
-/*
-a{
-    text-decoration: none;
-}
-
-/*
-.de_mi_fi{
-    width: 90%;
-    .compose1{
-        width: 90%;
-        display: flex;    
-        height: 50px;                                   
-        margin-bottom: 15px;                        
-        border-radius: 15px;
-        padding: 0px 5px 10px 15px;
-        line-height: 0px;
-        color: #000;
-        background-color: $backg-primary;
-        transition: all 2500ms ease;
-        /*
-        &_description, h5{
-            display: inline-block;
-
-        *//*
-        &_left{
-            display: inline-block;
-            width: 90%;
-            p, h5{
-                display: flex;
-                width: 100%;
-                border: 1px black solid;
-
-            }
-        }
-        &_right{
-            width: 20%;
-            height: 45px;
-            text-align: right;
-            border: 1px black solid;
-            background-color: yellow;
-            display: inline-flex;
-            flex-direction: row;
-            margin-right: -1px;
-            
-
-            .prix{
+/*            .prix{
                 display: inline-block;
                 width: 30px;
                 height: auto;
