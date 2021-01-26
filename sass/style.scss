@@ -12,6 +12,7 @@
         padding: 0px 0px 5px 0px;
         justify-content: center;
         box-sizing: border-box;
+
         /* Conteneur Entrée, Plat et dessert*/
         .restaurant {
             width: 100%;
@@ -21,21 +22,26 @@
             z-index: 66;
         }
 
-        /* titre de chaque restaurant*/
+        /* Titre chaque restaurant en mobile */
         .titre{
-            padding-top: 20px;
-            padding-bottom: 10px;             
-            margin-top: 15px;
+            border-top-right-radius: 25px;
+            border-top-left-radius: 25px;
+            width: 100%;
+            display: flex;
+            padding-top: 10px;
+            margin-bottom: 1em;
             &_left{
+                margin: 0em 0em 0em 1em;
                 padding: 0;
-                display: flex;
-                width: 70%;
-                text-align: left;
-                justify-content: space-between;
-                font-size: 0.81em;
-                font-family: 'shrikhand';
+                font: 1.4em 'shrikhand';
             }
-        }
+
+            /* bouton en forme de coeur à droite du titre */
+            .btn_white {
+                right: 20px;
+                position: absolute;                 
+            }     
+        }    
 
         .footer, .fonction, .endroit, .main-menu, .titre, .sousmenu, .divbtn {
             display: flex;
@@ -56,8 +62,8 @@
             img{
                 margin-top: 0px;
                 margin-bottom: 0px;
-                width: 45%;
-                height: 30px;            
+                width: 40%;
+                height: 30px;          
             }
         }
 
@@ -68,15 +74,18 @@
                 margin-bottom: 15px;
             }
             h1{
-                font-size: 1.7em;
-                padding: 1px 23px;
-                margin: 0px 20px 0px 20px;
+                font-size: 1.5em;
+                padding: 1px 25px;
+                margin: 0px 25px 0px 25px;
+                letter-spacing: normal;
             }
             p{
-                padding: 1px 20px;
+                letter-spacing: normal;
+                padding: 1px 15px;
                 font-size: 1.1em;
             }
         }
+
         $color-tertiaire: #99E2D0;
         /* menu des restaurants page Accueil */
         .main-menu{
@@ -119,47 +128,13 @@
                             border-top-right-radius: 20px;
                             border-top-left-radius: 20px;       
                         }
-                    }
-                              
+                    }                              
                 }
             }
         }
 
-        /* Entrée, Plat et Dessert*/
-        .sousmenu{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 20px;
-            h2{
-                text-align: left;
-                margin-left: 20px;
-            }
-            .container{
-                width: 100%;
-                margin: auto;
-                .plat{
-                    width: 90%;
-                    margin: auto;
-                    margin-bottom: 20px;
-                    &_left{
-                        h5{
-                            font-size: 1.1em;
-                            padding: 0.5em 0em;
-                        }
-                        p{
-                            font-size: 0.9em;
-                            padding: 0.5em 0em;
-                        }
-                    }
-                }
-                .plat:hover{
-                    width: 85%;
-                }
-            }
-        }
 
-        /* Pied de page */
+        /* Pied de page en mobile */
         .footer{
             width: 100%;
             padding: 1em 0em 0em 0em;
@@ -206,7 +181,6 @@
             h1{
                 letter-spacing: 6px;            
             }
-
             p{
                 font-size: 1.2em;
                 letter-spacing: 2px;
@@ -462,7 +436,7 @@ h2{
         border-right: none;
     }
 }
-$alpha: 10%;
+
 
 /* Titre chaque restaurant en desktop */
 .titre{
@@ -478,7 +452,8 @@ $alpha: 10%;
         padding: 0;
         font: 1.5em 'shrikhand';
     }
-    /* bouton en forme de coeur à droite du titre */
+
+    /* bouton en forme de coeur à droite du titre Desktop */
     .btn_white {
         height: 1.2em;
         width: 1.2em;
@@ -495,7 +470,6 @@ $alpha: 10%;
             display: none;
         }
 
-
         .menu_like {
             background-color: #f6f6f6;
             position: absolute;
@@ -507,7 +481,7 @@ $alpha: 10%;
             align-items:center;
             justify-content:center;
             mix-blend-mode: lighten;
-        } 
+        }
     }
     .btn_white:hover{
         border: transparent;             
@@ -517,14 +491,13 @@ $alpha: 10%;
             background: -moz-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
             background: -o-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
             background: linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;  /* transform icon en text*/
+            -webkit-text-fill-color: transparent;/* transform icon en transparent*/
             animation: 1s remplissage-heart ease-in-out both;
         }
         .far{
-            display: none;
+            display: none; /* far fa-heart caché*/
         }
-
     } 
 }    
 
@@ -630,7 +603,7 @@ $alpha: 10%;
             .far{
                 display: none;
             }
-        }      
+        }        
     }
 }
 /* remplissage du background de heart */
@@ -714,6 +687,15 @@ $alpha: 10%;
         text-align: center;
         border-top: $backg-search-top;
         background-color: $backg-search;
+        &_icon{
+            .fa-map-marker-alt{
+                margin-right: 15px;
+                font-size: 1.4em;
+            }
+            .visually-hidden{
+                font-size: 1.4em;
+            }
+        }
     }
 
 
@@ -752,8 +734,6 @@ $alpha: 10%;
 }
 
 
-
-
 .fonction, .main-menu, .sousmenu, .footer, .endroit{
     display: flex;
 }
@@ -767,13 +747,11 @@ $alpha: 10%;
         margin: 0;
         margin-left: 30px;
     }
-
     .container{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center; 
-          
+        justify-content: center;      
         .info{
             display: flex;
             margin-right: 5%;
@@ -819,8 +797,7 @@ $alpha: 10%;
     }
 }
 
-
-
+/* pied de page en desktop */
 .footer{
     display: flex;
     flex-direction: column;
@@ -899,7 +876,7 @@ $alpha: 10%;
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    animation: Apparition 3000ms both ease-in-out;/*apparition Entrée, plat, dessert*/
+    animation: Apparition 2000ms both ease-in-out;/*apparition Entrée, plat, dessert*/
     h2{
         text-align: center;
     }
@@ -908,11 +885,12 @@ $alpha: 10%;
         margin: auto;
         .plat{
             margin: auto;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }        
     }
 }
 
+/*  Apparition sousmenu en groupe */
 @keyframes Apparition {
     0% {
         opacity: 0;
@@ -925,13 +903,13 @@ $alpha: 10%;
 }
 /* Temps d'attente avant l'arrivée du proupe: Entrée, Plat, Dessert */
 .sousmenu:nth-child(1){
-    animation-delay: 0.5s;
+    animation-delay: 0.2s;
 }
 .sousmenu:nth-child(2){
-    animation-delay: 2.5s;
+    animation-delay: 0.6s;
 }
 .sousmenu:nth-child(3){
-    animation-delay: 3.5s;
+    animation-delay: 0.9s;
 }
 /* Mise en page pour chaque plat*/
 $color-backgplat: rgba(240, 240, 240, 1);
@@ -939,8 +917,7 @@ $color-backgplat: rgba(240, 240, 240, 1);
     border: 2px solid transparent;
     display: flex;       
     border-radius: 20px;
-    cursor: pointer;
-    width: 90%;                      
+    cursor: pointer;                     
     line-height: 0.5em;
     margin-bottom: 10px;
     color: #000;
@@ -951,7 +928,7 @@ $color-backgplat: rgba(240, 240, 240, 1);
         align-items: flex-start;
         justify-content: flex-end;
         font-size: 1.4em;
-        padding: 0.5em 0.5em;    
+        padding: 0.5em 1em;    
     }
     &_left{
         text-overflow: ellipsis;
@@ -983,12 +960,13 @@ $color-backgplat: rgba(240, 240, 240, 1);
     }
 
     &_right{      
-        display: flex;      
+        display: flex;  
+        margin: 0px 15px 0px 20px;  
         .check{
             display: none;
             align-items: center;
             height: auto; 
-            margin: 0em 0em 0em 1em;
+            margin: 0em 0em 0em 0em;
             width: 3.2em;
             margin: -0.5em -2em -0.5em 0em;         
             border-top-right-radius: 20px;
@@ -1006,20 +984,17 @@ $color-backgplat: rgba(240, 240, 240, 1);
                 margin: 0em -2em 0em 1em;                     
             }
         }
-    }
-    
+    }    
 }
 .plat:hover{
-    opacity: 1;
+    opacity: 0.8;
     position: relative;
-    margin-left: 0%;
-    width: 87%;
-    transform: translateX(-30px);
+    margin: auto;
     .check{
         display: flex;
         .fa-check{
             color: $color-tertiaire;
-            animation: 300ms petitecoche ease-in-out both;
+            animation: 2000ms petitecoche ease-in-out both;
         }
     }
 } 
