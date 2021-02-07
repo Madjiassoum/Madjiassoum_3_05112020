@@ -26,19 +26,48 @@
   .contain-page .restaurant {
     width: 100%;
     margin-top: -8px;
+    background-color: #f6f6f6;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     z-index: 66;
   }
+  .contain-page .sousmenu {
+    width: 100%;
+  }
+  .contain-page .sousmenu .container {
+    width: 98%;
+  }
+  .contain-page .sousmenu .container .plat {
+    width: 90%;
+    padding: 0.45em 1em;
+  }
+  .contain-page .sousmenu .container .plat .nom {
+    font-size: 1.1em;
+  }
+  .contain-page .sousmenu .container .plat h5 {
+    font-size: 1.1em;
+  }
+  .contain-page .menu {
+    margin-bottom: -5px;
+    z-index: 0;
+  }
+  .contain-page .menu img {
+    width: 99%;
+    margin-bottom: -5px;
+    z-index: 1;
+  }
   .contain-page .titre {
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    position: relative;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     padding-top: 10px;
     margin-bottom: 1em;
+    z-index: 99;
+    background-color: #f6f6f6;
     /* bouton en forme de coeur à droite du titre */
   }
   .contain-page .titre_left {
@@ -94,6 +123,13 @@
     letter-spacing: normal;
     padding: 1px 15px;
     font-size: 1.1em;
+  }
+  .contain-page .fonction .container .info {
+    margin: auto;
+    margin-bottom: 10px;
+  }
+  .contain-page .fonction .container .info .filter-option__label {
+    font: 1.1em bold;
   }
   .contain-page .main-menu {
     -webkit-box-pack: center;
@@ -295,7 +331,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #fff;
+  background-color: white;
 }
 
 /* Les variables de notre page */
@@ -310,7 +346,7 @@ body {
   max-width: 1280px;
   height: auto;
   margin: auto;
-  background-color: rgba(151, 144, 144, 0.631);
+  background-color: #f6f6f6;
   top: 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -318,7 +354,7 @@ body {
 
 .contain-page .restaurant {
   width: 100%;
-  background-color: rgba(151, 144, 144, 0.631);
+  background-color: #f6f6f6;
 }
 
 /* Le loader spinner*/
@@ -419,18 +455,18 @@ body {
             transform: scale(1);
   }
   50% {
-    -webkit-transform: scale(1.25);
-            transform: scale(1.25);
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
   }
   70% {
-    -webkit-transform: scale(2);
-            transform: scale(2);
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
     color: #9356DC;
     text-shadow: 2px 2px 2px #2d204d;
   }
   80% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
     text-shadow: 2px 2px 2px #2d204d;
     color: #ff79DA;
   }
@@ -457,18 +493,18 @@ body {
             transform: scale(1);
   }
   50% {
-    -webkit-transform: scale(1.25);
-            transform: scale(1.25);
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
   }
   70% {
-    -webkit-transform: scale(2);
-            transform: scale(2);
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
     color: #9356DC;
     text-shadow: 2px 2px 2px #2d204d;
   }
   80% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
     text-shadow: 2px 2px 2px #2d204d;
     color: #ff79DA;
   }
@@ -497,8 +533,14 @@ body {
   0% {
     opacity: 0.2;
   }
+  25% {
+    opacity: 0.4;
+  }
   50% {
     opacity: 0.8;
+  }
+  75% {
+    opacity: 0.9;
   }
   100% {
     opacity: 1;
@@ -508,8 +550,14 @@ body {
   0% {
     opacity: 0.2;
   }
+  25% {
+    opacity: 0.4;
+  }
   50% {
     opacity: 0.8;
+  }
+  75% {
+    opacity: 0.9;
   }
   100% {
     opacity: 1;
@@ -613,13 +661,33 @@ h2 span {
   /* transform icon en text*/
   -webkit-text-fill-color: transparent;
   /* transform icon en transparent*/
-  -webkit-animation: 1500ms remplissage-heart ease-in-out both;
-          animation: 1500ms remplissage-heart ease-in-out both;
+  -webkit-animation: 1s remplissage-heart ease-in-out both;
+          animation: 1s remplissage-heart ease-in-out both;
 }
 
 .titre .btn_white:hover .far {
   display: none;
   /* far fa-heart caché*/
+}
+
+.titre .btn_white:active .fas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#ff79DA));
+  background: linear-gradient(0deg, #9356DC 0%, #ff79DA 100%);
+  -webkit-background-clip: text;
+  /* transform icon en text*/
+  -webkit-text-fill-color: transparent;
+  /* transform icon en transparent*/
+  -webkit-animation: 1s remplissage-heart ease-in-out both;
+          animation: 1s remplissage-heart ease-in-out both;
+}
+
+.titre .btn_white:active .far {
+  display: none;
 }
 
 /* Menu chaque restaurant et son titre */
@@ -667,7 +735,7 @@ h2 span {
   left: 80%;
   top: 20%;
   font-weight: bold;
-  background-color: #94ee82;
+  background-color: #99e2d0;
   color: #05810f;
   padding: 2px 5px;
   border-radius: 3px;
@@ -702,7 +770,7 @@ h2 span {
   padding-bottom: 5px;
   border-bottom-right-radius: 21px;
   border-bottom-left-radius: 21px;
-  background-color: rgba(222, 222, 222, 0.938);
+  background-color: white;
 }
 
 .main-menu .restau_titre .g-title {
@@ -914,6 +982,7 @@ h2 span {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 2em;
+  background-color: #f6f6f6;
 }
 
 .endroit h1 {
@@ -932,8 +1001,8 @@ h2 span {
 .endroit .search {
   padding: 5px 0px;
   text-align: center;
-  border-top: 5px solid #b8aeae;
-  background-color: #aaaaaa;
+  border-top: 3px solid #dddddd;
+  background-color: #eaeaea;
 }
 
 .endroit .search_icon .fa-map-marker-alt {
@@ -988,9 +1057,8 @@ h2 span {
   display: -ms-flexbox;
   display: flex;
   margin-right: 5%;
-  padding: 5px 12px;
-  background-color: rgba(222, 222, 222, 0.938);
   opacity: 0.7;
+  border: 1px solid transparent;
   width: 280px;
   line-height: 1.1em;
   font-size: 1em;
@@ -1026,7 +1094,7 @@ h2 span {
   margin-left: -10px;
   font-size: 0.8em;
   padding: 1px;
-  background-color: #7D298D;
+  background-color: #9356dc;
   border-radius: 50%;
 }
 
@@ -1036,8 +1104,20 @@ h2 span {
 }
 
 .fonction .container .info .icon-indigo {
-  color: #7D298D;
+  color: #9356dc;
   margin: 2px 10px 0px 20px;
+}
+
+.fonction .container .info:nth-child(1) {
+  background-color: #f8f8f8;
+}
+
+.fonction .container .info:nth-child(2) {
+  background-color: #f8f8f8;
+}
+
+.fonction .container .info:nth-child(3) {
+  background-color: #f5edff;
 }
 
 /* pied de page en desktop */
@@ -1049,7 +1129,7 @@ h2 span {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #353535;
   padding-bottom: 10px;
 }
 
@@ -1085,7 +1165,7 @@ h2 span {
 
 .footer .container li a:hover {
   text-shadow: 2px 2px 2px #2d204d;
-  background-color: rgba(151, 144, 144, 0.631);
+  background-color: rgba(53, 53, 53, 0.7);
   padding: 1px 2px;
   border-radius: 5px;
   font-size: 1.3em;
@@ -1148,8 +1228,8 @@ h2 span {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 20px;
-  -webkit-animation: Apparition 2000ms both ease-in-out;
-          animation: Apparition 2000ms both ease-in-out;
+  -webkit-animation: Apparition 3s both ease-in-out;
+          animation: Apparition 3s both ease-in-out;
   /*apparition Entrée, plat, dessert*/
 }
 
@@ -1171,8 +1251,8 @@ h2 span {
 @-webkit-keyframes Apparition {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
   }
   100% {
     opacity: 1;
@@ -1183,8 +1263,8 @@ h2 span {
 @keyframes Apparition {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
   }
   100% {
     opacity: 1;
@@ -1195,18 +1275,18 @@ h2 span {
 
 /* Temps d'attente avant l'arrivée du proupe: Entrée, Plat, Dessert */
 .sousmenu:nth-child(1) {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 
 .sousmenu:nth-child(2) {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
 }
 
 .sousmenu:nth-child(3) {
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
 }
 
 /* Mise en page pour chaque plat*/
@@ -1221,7 +1301,7 @@ h2 span {
   margin-bottom: 10px;
   color: #000;
   padding: 0.4em 1em 0.4em 1em;
-  background-color: rgba(222, 222, 222, 0.938);
+  background-color: white;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }

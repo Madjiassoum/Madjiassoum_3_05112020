@@ -17,19 +17,48 @@
         .restaurant {
             width: 100%;
             margin-top: -8px;
+            background-color: rgba(246,246,246,255);
             border-top-right-radius: 20px;
             border-top-left-radius: 20px;
             z-index: 66;
         }
+        .sousmenu{
+            width: 100%;
+            .container{
+                width: 98%;
+                .plat{
+                    width: 90%;
+                    padding: 0.45em 1em;
+                    .nom{
+                        font-size: 1.1em;
+                    }
+                    h5{
+                        font-size: 1.1em;
+                    }
+                }
+            }
+        }
+        .menu{
+            margin-bottom: -5px;
+            z-index: 0;
+            img{
+                width: 99%;
+                margin-bottom: -5px;
+                z-index: 1;
+            }
+        }
 
         /* Titre chaque restaurant en mobile */
         .titre{
-            border-top-right-radius: 25px;
-            border-top-left-radius: 25px;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            position: relative;
             width: 100%;
             display: flex;
             padding-top: 10px;
             margin-bottom: 1em;
+            z-index: 99;
+            background-color: rgba(246, 246, 246, 255);
             &_left{
                 margin: 0em 0em 0em 1em;
                 padding: 0;
@@ -83,6 +112,18 @@
                 letter-spacing: normal;
                 padding: 1px 15px;
                 font-size: 1.1em;
+            }
+        }
+
+        .fonction{
+            .container{
+                .info{
+                    margin: auto;
+                    margin-bottom: 10px;
+                    .filter-option__label{
+                        font: 1.1em bold;
+                    }
+                }
             }
         }
 
@@ -283,7 +324,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 255);
 }
 
 /* Les variables de notre page */
@@ -292,10 +333,10 @@ $color-secondaire: #ff79DA;
 $color-tertiaire: #99E2D0; 
 $shadow-bouton: 2px 3px 3px $color-tertiaire;/* ombre des box boutons*/
 $shadow-txt: 2px 2px 2px rgb(45, 32, 77); /* ombre de textes*/
-$couleur-backg: rgba(151, 144, 144, 0.631); /* couleur background */
-$couleur-backg-plat: rgba(222, 222, 222, 0.938); /* couleur fond*/
-$backg-search: rgba(170, 170, 170, 1); /* backgr-color de search*/
-$backg-search-top: 5px solid rgba(184, 174, 174, 1);/* couleur padding top search*/
+$couleur-backg: rgba(246, 246, 246, 255); /* couleur background */
+$couleur-backg-plat: rgba(255,255,255,255); /* couleur fond*/
+$backg-search: rgba(234, 234, 234, 1); /* backgr-color de search*/
+$backg-search-top: 3px solid rgba(221, 221, 221, 201);/* couleur padding top search*/
 
 .contain-page{
     display: block;
@@ -308,7 +349,7 @@ $backg-search-top: 5px solid rgba(184, 174, 174, 1);/* couleur padding top searc
     
     .restaurant{
         width: 100%;
-        background-color: $couleur-backg;
+        background-color: rgba(246, 246, 246, 255);        
     }
 }
 
@@ -375,15 +416,15 @@ $backg-search-top: 5px solid rgba(184, 174, 174, 1);/* couleur padding top searc
             transform: scale(1);
         }
         50%{
-            transform: scale(1.25);
+            transform: scale(1.5);
         }
         70%{
-            transform: scale(2);
+            transform: scale(1.5);
             color: $color-primaire;
             text-shadow: $shadow-txt;
         } 
         80%{
-            transform: scale(1);
+            transform: scale(1.3);
             text-shadow: $shadow-txt; 
             color: $color-secondaire;           
         } 
@@ -412,10 +453,15 @@ $backg-search-top: 5px solid rgba(184, 174, 174, 1);/* couleur padding top searc
     0% {
         opacity: 0.2;
     }
+    25%{
+        opacity: 0.4;
+    }
     50% {
         opacity: 0.8;
     }
-    
+    75%{
+        opacity: 0.9;
+    }    
     100% {
         opacity: 1;
     }
@@ -495,11 +541,28 @@ h2{
             background: linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
             -webkit-background-clip: text;  /* transform icon en text*/
             -webkit-text-fill-color: transparent;/* transform icon en transparent*/
-            animation: 1500ms remplissage-heart ease-in-out both;
+            animation: 1s remplissage-heart ease-in-out both;
         }
         .far{
             display: none; /* far fa-heart caché*/
         }
+    }
+    .btn_white:active{
+       .fas{
+           display: flex;
+           width: 100%;
+           height: 100%;
+           background: -webkit-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
+           background: -moz-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
+           background: -o-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
+           background: linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
+           -webkit-background-clip: text;  /* transform icon en text*/
+           -webkit-text-fill-color: transparent;/* transform icon en transparent*/
+           animation: 1s remplissage-heart ease-in-out both;
+       } 
+       .far{
+           display: none;
+       }
     } 
 }    
 
@@ -529,7 +592,7 @@ h2{
                 left: 80%;
                 top: 20%;
                 font-weight: bold;
-                background-color: rgb(148, 238, 130);
+                background-color: rgba(153, 226, 208, 255);
                 color: darken(rgb(5, 129, 15), 0%);
                 padding: 2px 5px;
                 border-radius: 3px;
@@ -687,6 +750,7 @@ h2{
 .endroit{
     flex-direction: column;
     margin-bottom: 2em;
+    background-color: rgba(246,246,246,255);
     h1 {
         text-align: center;
         letter-spacing: 0.4em;
@@ -736,9 +800,9 @@ h2{
         .info{
             display: flex;
             margin-right: 5%;
-            padding: 5px 12px;
-            background-color: $couleur-backg-plat;
+            //background-color: $couleur-backg-plat;
             opacity: 0.7;
+            border: 1px solid transparent;
             width: 280px;
             line-height: 1.1em;
             font-size: 1em;
@@ -763,7 +827,7 @@ h2{
                 margin-left: -10px;
                 font-size: 0.8em;
                 padding: 1px;                                       
-                background-color: #7D298D;   
+                background-color: rgba(147, 86, 220, 255);
                 border-radius: 50%;
             }
             .icon-gray{
@@ -771,9 +835,18 @@ h2{
                 color: gray;
             }
             .icon-indigo{
-                color: #7D298D;
+                color: rgba(147, 86, 220, 255);
                 margin: 2px 10px 0px 20px;
             }
+        }
+        .info:nth-child(1){
+            background-color: rgba(248, 248, 248, 255);
+        }
+        .info:nth-child(2){
+            background-color: rgba(248, 248, 248, 255);
+        }
+        .info:nth-child(3){
+            background-color: rgba(245,237,255,255);
         }
     }
 }
@@ -782,7 +855,7 @@ h2{
 .footer{
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(53, 53, 53, 255);
     padding-bottom: 10px;
     h2{
         margin: auto;
@@ -806,7 +879,7 @@ h2{
 
         li a:hover{
             text-shadow: $shadow-txt;
-            background-color: rgba(151, 144, 144, 0.631);
+            background-color: rgba(53, 53, 53, 0.7);
             padding: 1px 2px;
             border-radius: 5px;
             font-size: 1.3em;            
@@ -857,7 +930,7 @@ h2{
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    animation: Apparition 2000ms both ease-in-out;/*apparition Entrée, plat, dessert*/
+    animation: Apparition 3s both ease-in-out;/*apparition Entrée, plat, dessert*/
     h2{
         text-align: center;
     }
@@ -875,7 +948,7 @@ h2{
 @keyframes Apparition {
     0% {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(25px);
     }
     100% {
         opacity: 1;
@@ -884,16 +957,15 @@ h2{
 }
 /* Temps d'attente avant l'arrivée du proupe: Entrée, Plat, Dessert */
 .sousmenu:nth-child(1){
-    animation-delay: 0.2s;
+    animation-delay: 0.3s;
 }
 .sousmenu:nth-child(2){
-    animation-delay: 0.6s;
+    animation-delay: 0.7s;
 }
 .sousmenu:nth-child(3){
-    animation-delay: 0.9s;
+    animation-delay: 1.2s;
 }
 /* Mise en page pour chaque plat*/
-$color-backgplat: rgba(240, 240, 240, 1);
 .plat{
     border: 2px solid transparent;
     display: flex;       
