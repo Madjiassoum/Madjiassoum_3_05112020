@@ -1,6 +1,6 @@
 /* En dessous de TABLETTES donc les mobiles */
 @media screen and (max-width: 599px){
-    body{          
+    body{        
         margin: 0px;
         padding: 0px;
         font-family: 'roboto', century, 'sans-serif', Verdana;      
@@ -24,6 +24,11 @@
         }
         .sousmenu{
             width: 100%;
+            h2{
+                font-weight: normal;
+                text-transform: uppercase;
+                font-size: 1.2em;
+            }
             .container{
                 width: 98%;
                 .plat{
@@ -104,25 +109,40 @@
             }
             h1{
                 font-size: 1.5em;
-                padding: 1px 25px;
-                margin: 0px 25px 0px 25px;
+                padding: 1px 55px;
+                margin: 0px 35px 0px 35px;
                 letter-spacing: normal;
             }
             p{
                 letter-spacing: normal;
-                padding: 1px 15px;
+                padding: 1px 20px;
+                margin: 0px 25px 0px 25px;
                 font-size: 1.1em;
+            }
+            .divbtn{
+                margin-top: 20px;
             }
         }
 
         .fonction{
-            .container{
+            .container{           
                 .info{
+                    width: 90%;
                     margin: auto;
+                    margin-top: 10px;
                     margin-bottom: 10px;
                     .filter-option__label{
-                        font: 1.1em bold;
+                        font: 1.3em bold;
                     }
+                }
+                .info:nth-child(1){
+                    background-color: rgba(248, 248, 248, 255);
+                }
+                .info:nth-child(2){
+                    background-color: rgba(248, 248, 248, 255);
+                }
+                .info:nth-child(3){
+                    background-color: rgba(245,237,255,255);
                 }
             }
         }
@@ -303,6 +323,7 @@
         .sousmenu{
             h2{
                 text-align: center;
+                text-transform: uppercase;
             }
             .plat{
                 &_left h5{
@@ -933,6 +954,7 @@ h2{
     animation: Apparition 3s both ease-in-out;/*apparition Entrée, plat, dessert*/
     h2{
         text-align: center;
+        text-transform: uppercase;
     }
     .container{
         width: 99%;
