@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* En dessous de TABLETTES donc les mobiles */
+/* Les mobiles */
 @media screen and (max-width: 599px) {
   body {
     margin: 0px;
@@ -52,6 +52,10 @@
   .contain-page .sousmenu .container .plat h5 {
     font-size: 1.1em;
   }
+  .contain-page .sousmenu .container .plat .prix {
+    margin-right: -20px;
+    margin-top: 15px;
+  }
   .contain-page .menu {
     margin-bottom: -5px;
     z-index: 0;
@@ -103,53 +107,90 @@
     margin-left: 20px;
   }
   .contain-page .header {
+    padding: 0px;
     width: 90%;
-    height: 35px;
+    height: 65px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .contain-page .header img {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 10px 0px 15px 0px;
+    width: 45%;
     height: 30px;
   }
   .contain-page .endroit {
-    margin-bottom: 2.5em;
+    margin-bottom: 3em;
   }
   .contain-page .endroit .search {
-    margin-bottom: 15px;
+    padding: 1em 0em;
+    font-size: 0.81em;
+    margin-bottom: 2em;
   }
   .contain-page .endroit h1 {
     font-size: 1.5em;
-    padding: 1px 55px;
+    padding: 1em 3em;
     margin: 0px 35px 0px 35px;
     letter-spacing: normal;
   }
   .contain-page .endroit p {
     letter-spacing: normal;
-    padding: 1px 20px;
-    margin: 0px 25px 0px 25px;
-    font-size: 1.1em;
+    padding: 5px 20px;
+    margin: 0px 30px 0px 30px;
+    font-size: 1.2em;
   }
   .contain-page .endroit .divbtn {
-    margin-top: 20px;
+    margin-top: 2.2em;
+    margin-bottom: 2em;
+  }
+  .contain-page .endroit .divbtn .btn {
+    padding: 1em 1.1em;
+    font-size: 1.1em;
+    border-radius: 2.2em;
+  }
+  .contain-page .fonction {
+    margin-top: 3em;
   }
   .contain-page .fonction .container .info {
     width: 90%;
     margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
+    border: 0.02em solid transparent;
+    background-color: rgba(230, 230, 230, 0.5);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-shadow: 0.2px 1px 2px rgba(220, 220, 220, 0.71);
+            box-shadow: 0.2px 1px 2px rgba(220, 220, 220, 0.71);
   }
   .contain-page .fonction .container .info .filter-option__label {
-    font: 1.3em bold;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'roboto', century, 'sans-serif', Verdana;
+    letter-spacing: 0.2em;
   }
-  .contain-page .fonction .container .info:nth-child(1) {
-    background-color: #f8f8f8;
-  }
-  .contain-page .fonction .container .info:nth-child(2) {
-    background-color: #f8f8f8;
-  }
-  .contain-page .fonction .container .info:nth-child(3) {
-    background-color: #f5edff;
+  .contain-page .fonction .container .info:hover {
+    background-color: rgba(230, 230, 230, 0.65);
+    -webkit-box-shadow: 0.2px 2px 2px rgba(220, 220, 220, 0.8);
+            box-shadow: 0.2px 2px 2px rgba(220, 220, 220, 0.8);
   }
   .contain-page .main-menu {
     -webkit-box-pack: center;
@@ -158,7 +199,11 @@
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    margin: 2.5em 0em 2em 0em;
+    margin: 3em 0em 2em 0em;
+  }
+  .contain-page .main-menu h2 {
+    padding-top: 1em;
+    margin-bottom: 0.6em;
   }
   .contain-page .main-menu .container {
     width: 95%;
@@ -191,11 +236,11 @@
     position: absolute;
     left: 70%;
     top: 35px;
-    color: #5dd1b5;
+    color: #32b091;
     background-color: #97e1cf;
-    padding: 2.5px 4px;
+    padding: 5px 7px;
     border-radius: 3px;
-    font-size: 0.81em;
+    font-size: 0.8em;
   }
   .contain-page .main-menu .container .restau .image_menu img {
     width: 100%;
@@ -209,14 +254,30 @@
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
   }
+  .contain-page .main-menu .container .restau .restau_titre .g-title {
+    padding: 0.8em 0em;
+  }
+  .contain-page .main-menu .container .restau .restau_titre .g-title h3 {
+    font-family: 'roboto', century, 'sans-serif', Verdana;
+  }
+  .contain-page .main-menu .container .restau .restau_titre .btn_white {
+    margin-top: 2.5em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
   .contain-page .footer {
     width: 100%;
     padding: 1em 0em 0em 0em;
     margin: 2em 0em 0.2em 0em;
   }
   .contain-page .footer h2 {
-    font-size: 1.2em;
     font-family: 'shrikhand';
+    font-size: 1.2em;
+    letter-spacing: 0.6px;
     margin-left: 20px;
   }
   .contain-page .footer .container {
@@ -232,9 +293,14 @@
             justify-content: flex-start;
   }
   .contain-page .footer .container li {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     margin-left: -15px;
-    font-size: .81em;
+  }
+  .contain-page .footer .container li a {
+    font-size: 1.1em;
+  }
+  .contain-page .footer .container li .fas {
+    font-size: 0.8em;
   }
 }
 
@@ -419,17 +485,17 @@ body {
     opacity: 1;
   }
   25% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    -webkit-transform: rotate(2turn);
+            transform: rotate(2turn);
   }
   90% {
-    -webkit-transform: rotate(270deg);
-            transform: rotate(270deg);
+    -webkit-transform: rotate(3turn);
+            transform: rotate(3turn);
     opacity: 0;
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    -webkit-transform: rotate(2turn);
+            transform: rotate(2turn);
     opacity: 0;
     display: none;
   }
@@ -440,17 +506,17 @@ body {
     opacity: 1;
   }
   25% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    -webkit-transform: rotate(2turn);
+            transform: rotate(2turn);
   }
   90% {
-    -webkit-transform: rotate(270deg);
-            transform: rotate(270deg);
+    -webkit-transform: rotate(3turn);
+            transform: rotate(3turn);
     opacity: 0;
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    -webkit-transform: rotate(2turn);
+            transform: rotate(2turn);
     opacity: 0;
     display: none;
   }
@@ -476,8 +542,8 @@ body {
             transform: scale(1);
   }
   50% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    -webkit-transform: scale(2);
+            transform: scale(2);
   }
   70% {
     -webkit-transform: scale(1.5);
@@ -486,8 +552,8 @@ body {
     text-shadow: 2px 2px 2px #2d204d;
   }
   80% {
-    -webkit-transform: scale(1.3);
-            transform: scale(1.3);
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
     text-shadow: 2px 2px 2px #2d204d;
     color: #ff79DA;
   }
@@ -514,8 +580,8 @@ body {
             transform: scale(1);
   }
   50% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    -webkit-transform: scale(2);
+            transform: scale(2);
   }
   70% {
     -webkit-transform: scale(1.5);
@@ -524,8 +590,8 @@ body {
     text-shadow: 2px 2px 2px #2d204d;
   }
   80% {
-    -webkit-transform: scale(1.3);
-            transform: scale(1.3);
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
     text-shadow: 2px 2px 2px #2d204d;
     color: #ff79DA;
   }
@@ -620,7 +686,8 @@ h2 span {
   width: 80%;
   margin: 0em 0em 0em 1.5em;
   padding: 0;
-  font: 1.5em 'shrikhand';
+  font-size: 1.5em;
+  font-family: 'shrikhand';
 }
 
 .titre .btn_white {
@@ -682,8 +749,8 @@ h2 span {
   /* transform icon en text*/
   -webkit-text-fill-color: transparent;
   /* transform icon en transparent*/
-  -webkit-animation: 1s remplissage-heart ease-in-out both;
-          animation: 1s remplissage-heart ease-in-out both;
+  -webkit-animation: 800ms remplissage-heart ease-in-out both;
+          animation: 800ms remplissage-heart ease-in-out both;
 }
 
 .titre .btn_white:hover .far {
@@ -703,8 +770,8 @@ h2 span {
   /* transform icon en text*/
   -webkit-text-fill-color: transparent;
   /* transform icon en transparent*/
-  -webkit-animation: 1s remplissage-heart ease-in-out both;
-          animation: 1s remplissage-heart ease-in-out both;
+  -webkit-animation: 800ms remplissage-heart ease-in-out both;
+          animation: 800ms remplissage-heart ease-in-out both;
 }
 
 .titre .btn_white:active .far {
@@ -757,7 +824,7 @@ h2 span {
   top: 20%;
   font-weight: bold;
   background-color: #99e2d0;
-  color: #05810f;
+  color: #063a0a;
   padding: 2px 5px;
   border-radius: 3px;
 }
@@ -823,6 +890,7 @@ h2 span {
   cursor: pointer;
   position: relative;
   background-color: transparent;
+  margin-left: 1em;
 }
 
 .main-menu .restau_titre .btn_white .fas {
@@ -833,7 +901,7 @@ h2 span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 1.7em;
+  font-size: 1.6em;
 }
 
 .main-menu .restau_titre .btn_white:hover {
@@ -858,8 +926,8 @@ h2 span {
           transform-origin: bottom;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
-  -webkit-animation: 1500ms remplissage-heart ease-in-out both;
-          animation: 1500ms remplissage-heart ease-in-out both;
+  -webkit-animation: 800ms remplissage-heart ease-in-out both;
+          animation: 800ms remplissage-heart ease-in-out both;
 }
 
 .main-menu .restau_titre .btn_white:hover .far {
@@ -954,7 +1022,7 @@ h2 span {
   padding-top: 10px;
   width: 90%;
   margin: auto;
-  height: 50px;
+  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -992,8 +1060,10 @@ h2 span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 45%;
-  height: 50px;
+  padding: 5px 0px 5px 0px;
+  margin-bottom: 5px;
+  width: 40%;
+  height: 45px;
 }
 
 /* Zone contenant titre en page d'accueil*/
@@ -1098,7 +1168,9 @@ h2 span {
           justify-content: flex-end;
   margin-left: 10px;
   margin-right: -10px;
-  font: 1.4em bold;
+  font-weight: bold;
+  font-size: 1.1em;
+  letter-spacing: 1.2px;
 }
 
 .fonction .container .info .style-type {
@@ -1108,13 +1180,17 @@ h2 span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 25px;
   height: 25px;
   position: relative;
   color: white;
   margin-left: -10px;
   font-size: 0.8em;
-  padding: 1px;
+  font-weight: bold;
+  padding: 1px 1px 0px 1px;
   background-color: #9356dc;
   border-radius: 50%;
 }
@@ -1181,18 +1257,11 @@ h2 span {
   color: #fff;
   display: inline-block;
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 1.6em;
 }
 
 .footer .container li a:hover {
-  text-shadow: 2px 2px 2px #2d204d;
-  background-color: rgba(53, 53, 53, 0.7);
-  padding: 1px 2px;
-  border-radius: 5px;
-  font-size: 1.3em;
   text-decoration: underline;
-  -webkit-box-shadow: 2px 3px 3px #99E2D0;
-          box-shadow: 2px 3px 3px #99E2D0;
 }
 
 .footer .container .fas {
@@ -1224,9 +1293,8 @@ h2 span {
   position: relative;
   color: #fff;
   border-radius: 20px;
-  font-weight: bold;
-  line-height: 1.1em;
-  padding: 8px 10px;
+  line-height: 1.3em;
+  padding: 8px 25px;
   background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#ff79DA));
   background: linear-gradient(0deg, #9356DC 0%, #ff79DA 100%);
 }
@@ -1249,14 +1317,15 @@ h2 span {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 20px;
-  -webkit-animation: Apparition 3s both ease-in-out;
-          animation: Apparition 3s both ease-in-out;
+  -webkit-animation: Apparition 1.5s both ease-in-out;
+          animation: Apparition 1.5s both ease-in-out;
   /*apparition Entrée, plat, dessert*/
 }
 
 .sousmenu h2 {
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 25px;
 }
 
 .sousmenu .container {
@@ -1313,7 +1382,7 @@ h2 span {
 
 /* Mise en page pour chaque plat*/
 .plat {
-  border: 2px solid transparent;
+  border: 0px solid transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1329,14 +1398,16 @@ h2 span {
 }
 
 .plat .prix {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  font-size: 1.4em;
-  padding: 0.5em 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 1.3em;
+  height: auto;
+  margin-top: 4em;
+  padding: 1.2em 1em 0em 0em;
 }
 
 .plat_left {
@@ -1388,8 +1459,8 @@ h2 span {
       -ms-flex-align: center;
           align-items: center;
   height: auto;
-  margin: 0em 0em 0em 0em;
-  width: 3.2em;
+  margin: 0em;
+  width: 5em;
   margin: -0.5em -2em -0.5em 0em;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -1400,7 +1471,7 @@ h2 span {
   background-color: white;
   width: 20px;
   height: 20px;
-  padding: 2px;
+  padding: 1px 1px 0px 1px;
   border-radius: 50%;
   font-size: 0.7em;
   -webkit-box-align: center;
@@ -1409,13 +1480,23 @@ h2 span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0em -2em 0em 1em;
+  margin: 0em -1.6em 0em 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
 }
 
 .plat:hover {
   opacity: 0.8;
   position: relative;
   margin: auto;
+}
+
+.plat:hover .prix {
+  padding: 1.2em 1em 0em 0em;
+  margin-right: 1.5em;
+  margin-left: 1em;
 }
 
 .plat:hover .check {
