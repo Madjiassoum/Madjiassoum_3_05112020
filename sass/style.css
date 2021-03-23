@@ -185,7 +185,7 @@
     font-size: 1em;
     font-weight: bold;
     font-family: 'roboto', century, 'sans-serif', Verdana;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.12em;
   }
   .contain-page .fonction .container .info:hover {
     background-color: rgba(230, 230, 230, 0.65);
@@ -1294,7 +1294,7 @@ h2 span {
   color: #fff;
   border-radius: 20px;
   line-height: 1.3em;
-  padding: 8px 25px;
+  padding: 10px 20px;
   background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#ff79DA));
   background: linear-gradient(0deg, #9356DC 0%, #ff79DA 100%);
 }
@@ -1507,8 +1507,8 @@ h2 span {
 
 .plat:hover .check .fa-check {
   color: #99E2D0;
-  -webkit-animation: 500ms petitecoche ease-in-out both;
-          animation: 500ms petitecoche ease-in-out both;
+  -webkit-animation: 300ms petitecoche ease-in-out both;
+          animation: 300ms petitecoche ease-in-out both;
 }
 
 /* Animation de l'icone .fa-check de validation de menu */

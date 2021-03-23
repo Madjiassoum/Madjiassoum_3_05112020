@@ -161,7 +161,7 @@
                         font-size: 1em;
                         font-weight: bold;
                         font-family: 'roboto', century, 'sans-serif', Verdana;
-                        letter-spacing: 0.2em;                        
+                        letter-spacing: 0.12em;                        
                     }
                 }
                 .info:hover{
@@ -982,7 +982,7 @@ h2{
         color: #fff;
         border-radius: 20px;        
         line-height: 1.3em;
-        padding: 8px 25px;
+        padding: 10px 20px;
         background: -webkit-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
         background: -moz-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
         background: -o-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
@@ -1129,10 +1129,10 @@ h2{
         display: flex;
         .fa-check{
             color: $color-tertiaire;
-            animation: 500ms petitecoche ease-in-out both;
+            animation: 300ms petitecoche ease-in-out both;
         }
     }
-} 
+}
 
 /* Animation de l'icone .fa-check de validation de menu */
 @keyframes petitecoche {
