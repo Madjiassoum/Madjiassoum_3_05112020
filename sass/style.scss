@@ -1,26 +1,59 @@
+//Les VARIABLES UTILISEES DANS NOTRE PAGE// 
+$color-primaire: #9356DC; //1ere couleur //
+$color-secondaire: #ff79DA;//deuxieme couleur//
+$color-tertiaire: #99E2D0;//troisieme couleur//
+$fontfamily-body: 'roboto', century, 'sans-serif', Verdana;//police body roboto//
+$backg-endroi-restaurant: rgba(230, 230, 230, 0.75); //couleur fond restaurant//
+$backg-search: rgba(225, 225, 225, 1); // backgr-color de search//
+$backg-color-info: rgba(230, 230, 230, 0.6); //couleur backg fonctionnement//
+$box-shad-info: 2px 5px 5px rgba(220, 220, 220, 1);//ombre li fonctionnement//
+$border-info: 0.3em rgba(225, 225, 225, 0.2);// bordure li fonctionnment//
+$padding-info: 10px 5px 10px 5px; //padding info de fonctionnement //
+$margin-icon-info: 2px 10px 0px 20px; //margin icon tonctionnement//
+$padding-footer: 1em 0em 1em 0em;// padding du footer//
+$backg-footer: rgba(53, 53, 53, 255); //Couleur pied de page//
+$padding-btn: 0.8em 2em 0.8em 2em; // padding texte du bouton//
+$shadow-bouton: 2px 3px 3px $color-tertiaire;// ombre des box boutons//
+$shadow-txt: 2px 2px 2px rgb(45, 32, 77); //ombre de textes des boutons//
+$couleur-backg-plat: rgba(255, 255, 255, 255); //couleur fond//
+$box-shad-plat: 3px 3px 2px rgba(220, 220, 220, 50); //ombre bordure plat//
+$backg-search-top: 5px solid rgba(220, 220, 220, 240); //Bordure dessus Paris Marseille//
+$color-padding-bot-h2: 8px; // padding soulignement 4lettres de h2//
+$color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
+
 /* Les mobiles */
 @media screen and (max-width: 599px){
     body{        
         margin: 0px;
         padding: 0px;
-        font-family: 'roboto', century, 'sans-serif', Verdana;      
+        font-family: $fontfamily-body;      
     }
     .contain-page{
         min-width: 320px;
         height: 400px;
         margin: auto;  
-        padding: 0px 0px 5px 0px;
+        padding: 0px 0px 0px 0px;
         justify-content: center;
         box-sizing: border-box;
+        background-color: #fff;
 
         /* Conteneur Entrée, Plat et dessert*/
         .restaurant {
             width: 100%;
             margin-top: -8px;
-            background-color: rgba(246,246,246,255);
+            background-color: $backg-endroi-restaurant;
             border-top-right-radius: 20px;
             border-top-left-radius: 20px;
             z-index: 66;
+            .divbtn{
+                margin-top: 2em;
+                margin-bottom: 2.5em;
+                .btn{
+                    padding: $padding-btn;
+                    font-size: 1em;
+                    border-radius: 1.5em;
+                }
+            }
         }
         .sousmenu{
             width: 100%;
@@ -28,12 +61,22 @@
                 font-weight: normal;
                 text-transform: uppercase;
                 font-size: 1.2em;
+                span{
+                    display: inline;
+                    padding-bottom: $color-padding-bot-h2; /* padding soulignement 4lettres de h2*/
+                    border: $color-underline-h2; /*soulign 4lettres H2 color*/
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                }
             }
             .container{
                 width: 98%;
                 .plat{
                     width: 90%;
                     padding: 0.45em 1em;
+                    background-color: $couleur-backg-plat;
+                    box-shadow: $box-shad-plat;
                     .nom{
                         font-size: 1.1em;
                     }
@@ -41,19 +84,19 @@
                         font-size: 1.1em;
                     }
                     .prix{
-                        margin-right: -20px;
-                        margin-top: 15px;
+                        margin-left: 20px;
+                        margin-top: 20px;
                     }
                 }
             }
         }
         .menu{
-            margin-bottom: -5px;
+            margin-bottom: 10px;
             z-index: 0;
             img{
                 width: 99%;
                 margin-bottom: -5px;
-                z-index: 1;
+                z-index: -20;
             }
         }
 
@@ -62,22 +105,23 @@
             border-top-right-radius: 20px;
             border-top-left-radius: 20px;
             position: relative;
-            width: 100%;
+            width: 98%;
             display: flex;
-            padding-top: 10px;
+            padding-top: 1.1em;
             margin-bottom: 1em;
+            margin-top: -1em;
             z-index: 99;
-            background-color: rgba(246, 246, 246, 255);
             &_left{
                 margin: 0em 0em 0em 1em;
                 padding: 0;
-                font: 1.4em 'shrikhand';
+                font-family: 'shrikhand';
+                font-size: 1.4em;
             }
 
             /* bouton en forme de coeur à droite du titre */
             .btn_white {
                 right: 20px;
-                position: absolute;                 
+                position: absolute;                
             }     
         }    
 
@@ -97,48 +141,52 @@
         .header{
             padding: 0px;
             width: 90%;
-            height: 65px;
             display: flex;
             margin: auto;
             justify-content: center;
             align-items: center;
-
             img{
                 display: flex;
-                margin: auto;
                 align-items: center;
-                justify-content: center;
-                padding: 10px 0px 15px 0px;
-                width: 45%;
-                height: 30px; 
+                object-fit: cover;
+                width: 40%;     
             }
         }
 
         /* Titre de la page d'accueil */
         .endroit{
             margin-bottom: 3em;
+            background-color: $backg-endroi-restaurant;
             .search{
                 padding: 1em 0em;
-                font-size: 0.81em;
                 margin-bottom: 2em;
+                border-top: $backg-search-top;
+                background-color: $backg-search;
+                &_icon span{
+                    font-weight: bold;
+                    font-size: 1em;
+                }
+                &_icon .fa-map-marker-alt{
+                    font-size: 1.1em;
+                }
             }
             h1{
-                font-size: 1.5em;
-                padding: 1em 3em;
-                margin: 0px 35px 0px 35px;
-                letter-spacing: normal;
+                font-size: 1.7em;
+                padding: 1em 1.7em;
+                margin: 0em 1.1em 0em 1.1em;  
+                letter-spacing: normal;              
             }
             p{
                 letter-spacing: normal;
-                padding: 5px 20px;
-                margin: 0px 30px 0px 30px;
+                padding: 5px 10px;
+                margin: 0px 25px 0px 25px;
                 font-size: 1.2em;
             }
             .divbtn{
                 margin-top: 2.2em;
                 margin-bottom: 2em;
                 .btn{
-                    padding: 1em 1.1em;
+                    padding: $padding-btn;
                     font-size: 1.1em;
                     border-radius: 2.2em;
                 }
@@ -147,36 +195,55 @@
 
         .fonction{
             margin-top: 3em;
+            h2{
+                font-size: 1.5em;
+                margin-left: 2em;
+            }
             .container{           
                 .info{
                     width: 90%;
                     margin: auto;
                     margin-top: 10px;
                     margin-bottom: 10px;
-                    border: 0.02em solid transparent;
-                    background-color: rgba(230, 230, 230, 0.5);
+                    padding: $padding-info;
                     display: flex;
-                    box-shadow: 0.2px 1px 2px rgba(220, 220, 220, 0.71);
+                    border: $border-info;
+                    background-color: $backg-color-info;       
+                    box-shadow: $box-shad-info;             
+                    .style-type{
+                        margin-left: -20px;
+                        position: relative;
+                    }
+                    
+                    .icon-gray, .icon-indigo{
+                        margin: $margin-icon-info;
+                        color: gray;
+                        font-size: 1.2em;
+                    }
                     .filter-option__label{
+                        margin-left: 1em;
                         font-size: 1em;
                         font-weight: bold;
-                        font-family: 'roboto', century, 'sans-serif', Verdana;
-                        letter-spacing: 0.12em;                        
+                        padding: 15px 0px;
+                        font-family: $fontfamily-body;                      
                     }
                 }
                 .info:hover{
-                    background-color: rgba(230, 230, 230, 0.65);
-                    box-shadow: 0.2px 2px 2px rgba(220, 220, 220, 0.8);
+                    background-color: rgba(230, 230, 230, 0.75);                
+                    .fas{
+                        color: rgba(147, 86, 220, 255);
+                    }
                 }
             }
         }
 
-        $color-tertiaire: #99E2D0;
         /* menu des restaurants page Accueil */
         .main-menu{
             justify-content: center;
             display: inline-flex;
-            margin: 3em 0em 2em 0em;
+            background-color: $backg-endroi-restaurant;
+            margin: 3em 0em 0em 0em;
+            padding-bottom: 3.5em;
             h2{
                 padding-top: 1em;
                 margin-bottom: 0.6em;
@@ -199,13 +266,13 @@
                     position: relative;
                     .nouveau{
                         position: absolute;
-                        left: 70%;
-                        top: 35px;
+                        left: 80%;
+                        top: 30px;
                         color: darken($color-tertiaire, 30%);
                         background-color: darken($color-tertiaire, 0.5);
-                        padding: 5px 7px;
+                        padding: 6px 10px;
                         border-radius: 3px;
-                        font-size: 0.8em;
+                        font-weight: bold;                
                     }
                     .image_menu{
                         img{
@@ -223,11 +290,11 @@
                             padding: 0.8em 0em;   
 
                             h3{
-                                font-family: 'roboto', century, 'sans-serif', Verdana;
+                                font-family: $fontfamily-body;
                             }                         
                         }
                         .btn_white{
-                            margin-top: 2.5em;
+                            margin-top: 2.2em;
                             display: flex;
                             justify-content: flex-end;
                         }
@@ -240,13 +307,13 @@
         /* Pied de page en mobile */
         .footer{
             width: 100%;
-            padding: 1em 0em 0em 0em;
-            margin: 2em 0em 0.2em 0em;
+            padding: $padding-footer;
+            margin: 0em 0em 0em 0em;
+            background-color: $backg-footer;
             h2{
                 font-family: 'shrikhand';
-                font-size: 1.2em;
-                letter-spacing: 0.6px;
-                margin-left: 20px;
+                font-size: 1.1em;
+                margin-left: 24px;
             }
             .container{
                 display: flex;
@@ -259,7 +326,7 @@
                         font-size: 1.1em;
                     }
                     .fas{
-                        font-size: 0.8em;
+                        font-size: 0.75em;
                     }
                 }
             }
@@ -272,33 +339,43 @@
 @media screen and (min-width: 600px) and (max-width: 1024px) {
     body {
         margin: 0px;
-        justify-content: center;     
+        justify-content: center;
+        font-family: $fontfamily-body;  
     }
     .contain-page{
         display: inline-block;
         height: auto;
         margin: auto;
+        margin-bottom: 0px;
         justify-content: center;  
         box-sizing: border-box;
         max-width: 1024px;
 
-
         /* Zone en-tete d'accueil */
-        $couleur-backg: rgba(151, 144, 144, 0.631); /* couleur background */
         .endroit{
             margin-bottom: 2em;
+            flex-direction: column;
+            background-color: $backg-endroi-restaurant;
+            .search{
+                border-top: $backg-search-top;
+                background-color: $backg-search;
+                padding: 1em 0em;
+                margin-bottom: 2em;  
+            }
             h1{
-                letter-spacing: 6px;            
+                text-align: center;
+                letter-spacing: 0.2em;
+                margin: 1em 0em 0.5em 0em;
+                font-size: 1.8em;           
             }
             p{
                 font-size: 1.2em;
-                letter-spacing: 2px;
+                letter-spacing: 0.1em;
             }
-
-            .btn {
-                background-color: $couleur-backg;
-                span{
-                    font-weight: normal;
+            .divbtn{
+                .btn {
+                    padding: $padding-btn;
+                    margin-bottom: 2em;
                 }
             }
         }
@@ -307,30 +384,92 @@
         .fonction{
             h2{
                 text-align: center;
+                font-size: 1.5em;
+            }
+            .container{           
+                .info{
+                    width: 300px;
+                    margin: auto;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    padding: $padding-info;
+                    background-color: $backg-color-info;
+                    border: $border-info;
+                    display: flex;
+                    box-shadow: $box-shad-info;
+                    .style-type{
+                        margin-left: -15px;
+                    }
+                    
+                    .icon-gray, .icon-indigo{
+                        margin: $margin-icon-info;
+                        color: gray;
+                        font-size: 1.2em;
+                    }
+                    .filter-option__label{
+                        margin-left: 1em;
+                        font-size: 1em;
+                        font-weight: bold;
+                        padding: 13px 0px;
+                        font-family: $fontfamily-body;                      
+                    }
+                }
+                .info:hover{
+                    background-color: rgba(230, 230, 230, 0.75);
+                    .fas{
+                        color: rgba(147, 86, 220, 255);
+                    }
+                }
             }
         }
 
         /* Les menus en page d'accueil */
         .main-menu{
+            background-color: $backg-endroi-restaurant;
+            margin-bottom: 0px;
             h2{
                 text-align: center;
             }
             .container{
                 .restau {
                     width: 40%;
-                    margin-left: 3%;
-                    margin-right: 3%;
+                    margin-left: 2%;
+                    margin-right: 2%;
                     .nouveau{
-                        left: 70%;
+                        left: 75%;
+                        top: 50px;
+                        color: darken($color-tertiaire, 30%);
+                        background-color: darken($color-tertiaire, 0.5);
+                        padding: 6px 10px;
+                        border-radius: 3px;
+                        font-weight: bold;                       
                     }
+                    .restau_titre{
+                        .g-title{
+                            padding: 0.8em 0em;   
+
+                            h3{
+                                font-family: $fontfamily-body;
+                            }                         
+                        }
+                        .btn_white{
+                            margin-top: 2em;
+                            padding: 0px 0px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;                            
+                        }
+                    }                            
                 }
             }
         }
 
         /* Pied de page*/
         .footer{
-            margin-bottom: 1em;
+            margin-bottom: 0px;
+            background-color: $backg-footer;
             h2{
+                font-size: 1.6em;
                 font-family: 'shrikhand';
             }
             .container{
@@ -344,13 +483,15 @@
                     color: #fff;
                     display: inline-block;
                     text-decoration: none;
-                    font-size: 1.2em;
+                    font-size: 1.1em;
+                }
+                li a:hover{     
+                    text-decoration: underline;
                 }
                 .fas{                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
                     margin-right: 10px;
                     color: #fff;
                 }
-
             }
         }
 
@@ -361,19 +502,46 @@
                 font-family: 'shrikhand';
                 margin: 0px 0px 0px 20px;
             }
+            .btn_white{
+                align-items: center;
+                height: 1.1em;
+                padding: 0px;
+                .titre_like{
+                    margin: 0px;
+                }
+            }
         }
 
         /* contenaire du bouton Commander*/
-        .divbtn{
-            margin-bottom: 2em;
+        .restaurant{
+            background-color: $backg-endroi-restaurant;
+            .divbtn{
+                margin-top: 2em;
+                margin-bottom: 2.5em;
+                .btn{
+                    padding: $padding-btn;
+                    font-size: 1em;
+                    border-radius: 1.5em;
+                }
+            }
         }
+    
 
         .sousmenu{
             h2{
                 text-align: center;
                 text-transform: uppercase;
+                span{                    
+                    display: inline;
+                    padding-bottom: $color-padding-bot-h2; /* padding soulignement 4lettres de h2*/
+                    border: $color-underline-h2; /*soulign H2 color*/
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;                    
+                }
             }
             .plat{
+                box-shadow: $box-shad-plat;
                 &_left h5{
                     font-size: 1.3em; 
                     padding: 0.5em 0em;     
@@ -394,31 +562,23 @@ body{
     margin: 0;
     padding: 0;
     background-color: rgba(255, 255, 255, 255);
+    font-family: $fontfamily-body;
 }
-
-/* Les variables de notre page */
-$color-primaire: #9356DC;
-$color-secondaire: #ff79DA;
-$color-tertiaire: #99E2D0; 
-$shadow-bouton: 2px 3px 3px $color-tertiaire;/* ombre des box boutons*/
-$shadow-txt: 2px 2px 2px rgb(45, 32, 77); /* ombre de textes*/
-$couleur-backg: rgba(246, 246, 246, 255); /* couleur background */
-$couleur-backg-plat: rgba(255,255,255,255); /* couleur fond*/
-$backg-search: rgba(234, 234, 234, 1); /* backgr-color de search*/
-$backg-search-top: 3px solid rgba(221, 221, 221, 201);/* couleur padding top search*/
 
 .contain-page{
     display: block;
-    max-width: 1280px;
     height: auto;
     margin: auto;
-    background-color: $couleur-backg;
+    padding-bottom: 0;
+    margin-bottom: 0px;
     top: 5px; 
     box-sizing: border-box;
     
     .restaurant{
         width: 100%;
-        background-color: rgba(246, 246, 246, 255);        
+        background-color: $backg-endroi-restaurant;
+        margin-bottom: 0px;   
+        padding-bottom: 0px;    
     }
 }
 
@@ -462,7 +622,7 @@ $backg-search-top: 3px solid rgba(221, 221, 221, 201);/* couleur padding top sea
             opacity: 0;
         }
         100% {
-            transform: rotate(2turn);
+            transform: rotate(0turn);
             opacity: 0;
             display: none;
         }
@@ -488,7 +648,7 @@ $backg-search-top: 3px solid rgba(221, 221, 221, 201);/* couleur padding top sea
             transform: scale(2);
         }
         70%{
-            transform: scale(1.5);
+            transform: scale(2);
             color: $color-primaire;
             text-shadow: $shadow-txt;
         } 
@@ -514,7 +674,7 @@ $backg-search-top: 3px solid rgba(221, 221, 221, 201);/* couleur padding top sea
 .contain-page {
     z-index: 9999;
     opacity: 1;
-    animation: affichagepage 5s 1s both;
+    animation: affichagepage 4s 1s both;
 }
 
 /* keyframes qui fait apparaitre la page d'accueil après le loading-spinner*/
@@ -541,17 +701,13 @@ $backg-search-top: 3px solid rgba(221, 221, 221, 201);/* couleur padding top sea
     margin: 10px 0px 10px 0px;
 }
 h2{
-    text-align: center;
-    span{
-        display: inline;
-        padding-bottom: 8px;
-        border: 3px rgba(28, 156, 96, 0.877) solid;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-    }
+    text-align: center;  
+    font-size: 1.7em;  
 }
 
+.fonction, .main-menu, .sousmenu, .footer, .endroit{
+    display: flex;
+}
 
 /* Titre chaque restaurant en desktop */
 .titre{
@@ -563,56 +719,41 @@ h2{
     margin-bottom: 2em;
     &_left{
         width: 80%;
-        margin: 0em 0em 0em 1.5em;
+        margin: 0.5em 0em 0.5em 1.5em;
         padding: 0;
-        font-size: 1.5em;
+        font-size: 1.7em;
         font-family: 'shrikhand';
 
     }
 
     /* bouton en forme de coeur à droite du titre Desktop */
     .btn_white {
-        height: 1.2em;
-        width: 1.2em;
         background-color: transparent;
         border: none;
-        padding: 0;
-        font-size: 1.8em;
+        padding: 1px 1px 1.2px 1px;
+        font-size: 1.7em;
         display:flex;
         align-items:center;
         justify-content:center;
         position: relative; 
         cursor: pointer; 
+        height: 1.2em;
+        margin-top: 10px;
         .fas{
             display: none;
-        }
-
-        .menu_like {
-            background-color: #f6f6f6;
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            mix-blend-mode: lighten;
         }
     }
     .btn_white:hover{
         border: transparent;             
         .fas{
             display: flex;
-            width: 100%;
-            height: 100%;
             background: -webkit-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
             background: -moz-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
             background: -o-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
             background: linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
             -webkit-background-clip: text;  /* transform icon en text*/
             -webkit-text-fill-color: transparent;/* transform icon en transparent*/
-            animation: 800ms remplissage-heart ease-in-out both;
+            animation: 600ms remplissage-heart ease-in-out both;
         }
         .far{
             display: none; /* far fa-heart caché*/
@@ -621,15 +762,13 @@ h2{
     .btn_white:active{
        .fas{
            display: flex;
-           width: 100%;
-           height: 100%;
            background: -webkit-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
            background: -moz-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
            background: -o-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
            background: linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
            -webkit-background-clip: text;  /* transform icon en text*/
            -webkit-text-fill-color: transparent;/* transform icon en transparent*/
-           animation: 800ms remplissage-heart ease-in-out both;
+           animation: 600ms remplissage-heart ease-in-out both;
        } 
        .far{
            display: none;
@@ -637,13 +776,16 @@ h2{
     } 
 }    
 
-
 /* Menu chaque restaurant et son titre */
 .main-menu{
     flex-direction: column;
+    background-color: $backg-endroi-restaurant;
+    margin-bottom: 0em;
+    padding-bottom: 1.5em;
     h2{
-        margin: 0;
-        margin-left: 10%;
+        text-align: center;
+        font-size: 1.7em;
+        margin-bottom: 1em;
     }    
     .container{
         display: flex;
@@ -663,10 +805,10 @@ h2{
                 left: 80%;
                 top: 20%;
                 font-weight: bold;
-                background-color: rgba(153, 226, 208, 255);
-                color: darken(rgb(6, 58, 10), 0%);
-                padding: 2px 5px;
-                border-radius: 3px;
+                padding: 6px 10px;
+                border-radius: 3px;        
+                color: darken($color-tertiaire, 30%);
+                background-color: darken($color-tertiaire, 0.5);               
             }      
             .image_menu{
                 img{
@@ -706,7 +848,6 @@ h2{
         .btn_white {
             top: 5px;
             height: 2em;
-            width: 2em;
             border: transparent 0px solid;
             padding: 0;
             display:flex;
@@ -717,19 +858,17 @@ h2{
             background-color: transparent;
             margin-left: 1em;
             .fas{
-                display: none;                       }
+                display: none; 
+            }
             .far{
                 display: flex;
                 font-size: 1.6em;
             }
         }
         .btn_white:hover{
-            top: 5px;
             border: transparent;             
             .fas{
                 display: flex;
-                width: 100%;
-                height: 100%;
                 font-size: 1.6em;
                 background: -webkit-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
                 background: -moz-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
@@ -740,7 +879,7 @@ h2{
                 transform: scaleY(0);
                 transform-origin: bottom;
                 animation-fill-mode: backwards;
-                animation: 800ms remplissage-heart ease-in-out both;
+                animation: 600ms remplissage-heart ease-in-out both;
             }
             .far{
                 display: none;
@@ -751,28 +890,10 @@ h2{
 /* remplissage du background de heart */
 @keyframes remplissage-heart {
     0% {
-        transform: scaleY(0);
-        opacity: 0;        
-    }
-    20%{
-        transform: scaleY(0.2);
-        opacity: .21;
-    }
-    50%{
-        transform: scaleY(.5);
-        opacity: .5;
-    }
-    75%{
-        transform: scaleY(0.8);
-        opacity: .751;
-    }
-    90%{
-        transform: scaleY(.9);
-        opacity: .91;
-    }
+        transform: scaleY(0);     
+    }    
     100% {
         transform: scaleY(1);
-        opacity: 1;
     }
 }
 /* photo menu sur chaque restaurant */
@@ -790,12 +911,13 @@ h2{
 
 /* En-tete avec fleche pour aller sur page d'accueil*/
 .header{
-    padding-top: 10px;
+    padding: 0px;
     width: 90%;
-    margin: auto;
-    height: 60px;
+    height: 75px;
     display: flex;
+    margin: auto;
     justify-content: center;
+    align-items: center;
     a{
         text-decoration: none;
     }
@@ -813,10 +935,9 @@ h2{
         margin: auto;
         align-items: center;
         justify-content: center;
-        padding: 5px 0px 5px 0px;
-        margin-bottom: 5px;
+        padding: 5px 2px;
         width: 40%;
-        height: 45px;    
+        object-fit: cover;
     }
 }
 
@@ -824,154 +945,42 @@ h2{
 .endroit{
     flex-direction: column;
     margin-bottom: 2em;
-    background-color: rgba(246,246,246,255);
+    margin-top: 1.5em;
+    background-color: $backg-endroi-restaurant;
     h1 {
         text-align: center;
-        letter-spacing: 0.4em;
-        margin-bottom: 0px;
-        font-size: 2em;        
+        margin: 1em 0em 0.5em 0em;
+        font-size: 2.5em;       
     }
     p {
         text-align: center;
-        letter-spacing: 0.2em;
-        font-size: 1.3em;
+        font-size: 1.5em;
     }    
     .search{
-        padding: 5px 0px;
+        padding: 1.1em 0em;
         text-align: center;
         border-top: $backg-search-top;
         background-color: $backg-search;
         &_icon{
             .fa-map-marker-alt{
-                margin-right: 15px;
+                margin-right: 1.1em;
                 font-size: 1.4em;
             }
             .visually-hidden{
-                font-size: 1.4em;
+                font-size: 1.4em;                
             }
         }
+    }
+    .divbtn{
+        margin-bottom: 2em;
     }   
 }
-
-.fonction, .main-menu, .sousmenu, .footer, .endroit{
-    display: flex;
-}
-
-/*Explication fonctionnement en page d'accueil*/ 
-.fonction{
-    display: flex;
-    height: auto;  
-    flex-direction: column;
-    h2{
-        margin: 0;
-        margin-left: 30px;
-    }
-    .container{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;      
-        .info{
-            display: flex;
-            margin-right: 5%;
-            opacity: 0.7;
-            border: 1px solid transparent;
-            width: 280px;
-            line-height: 1.1em;
-            font-size: 1em;
-            border-radius: 25px;
-            padding: 8px 5px 5px 5px;       
-            margin-bottom: 10px;           
-            list-style-type: none;
-            .filter-option__label{
-                display: flex;
-                justify-content: flex-end;
-                margin-left: 10px;
-                margin-right: -10px;
-                font-weight: bold;
-                font-size: 1.1em;
-                letter-spacing: 1.2px;
-            }
-            .style-type{
-                display: flex;
-                justify-content: center;
-                align-items: center;              
-                width: 25px;
-                height: 25px; 
-                position: relative;                  
-                color: white;
-                margin-left: -10px;
-                font-size: 0.8em;
-                font-weight: bold;
-                padding: 1px 1px 0px 1px;                                       
-                background-color: rgba(147, 86, 220, 255);
-                border-radius: 50%;
-            }
-            .icon-gray{
-                margin: 2px 10px 0px 20px;
-                color: gray;
-            }
-            .icon-indigo{
-                color: rgba(147, 86, 220, 255);
-                margin: 2px 10px 0px 20px;
-            }
-        }
-        .info:nth-child(1){
-            background-color: rgba(248, 248, 248, 255);
-        }
-        .info:nth-child(2){
-            background-color: rgba(248, 248, 248, 255);
-        }
-        .info:nth-child(3){
-            background-color: rgba(245,237,255,255);
-        }
-    }
-}
-
-/* pied de page en desktop */
-.footer{
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(53, 53, 53, 255);
-    padding-bottom: 10px;
-    h2{
-        margin: auto;
-        font-size: 2em;
-        color: #fff;
-        letter-spacing: 5px;
-    }
-    .container{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        li{
-            list-style-type: none;  
-          
-        }
-        li a{
-            color: #fff;
-            display: inline-block;
-            text-decoration: none;
-            font-size: 1.6em;
-        }
-
-        li a:hover{     
-            text-decoration: underline;
-        }
-        .fas{
-            margin-right: 10px;
-            color: #fff;
-        }       
-    }
-}
-
-/* bouton Commander en desktop */
+/* bouton EXPLORER NOS RESTAURANTS  en desktop */
 .divbtn{
     width: 100%;
     height: 3em;
     display: flex;
     margin-bottom: 20px;
-    padding: 2px 0px;
     .btn {
         margin: auto;
         border: 0px;
@@ -982,7 +991,9 @@ h2{
         color: #fff;
         border-radius: 20px;        
         line-height: 1.3em;
-        padding: 10px 20px;
+        font-size: 1em;
+        margin-bottom: 2.5em;
+        padding: $padding-btn;
         background: -webkit-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
         background: -moz-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
         background: -o-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
@@ -995,17 +1006,91 @@ h2{
     }
 }
 
+/*Explication fonctionnement en page d'accueil*/ 
+.fonction{
+    height: auto; 
+    margin-bottom: 15px; 
+    flex-direction: column;
+    h2{
+        text-align: center;
+        font-size: 1.6em;
+    }
+    .container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;      
+        .info{
+            display: flex;
+            align-items: center;
+            margin-right: 5%;
+            border-radius: 20px;
+            padding: $padding-info;       
+            margin-bottom: 10px;           
+            list-style-type: none;
+            width: 300px;
+            margin: auto;
+            margin-top: 10px;
+            border: $border-info;
+            background-color: $backg-color-info;                    
+            box-shadow: $box-shad-info;
+            
+            .filter-option__label{                
+                margin-left: 1em;
+                font-size: 1em;
+                font-weight: bold;
+                padding: 15px 0px;
+                font-family: $fontfamily-body;
+            }
+            .style-type{
+                display: flex;
+                justify-content: center;
+                align-items: center;              
+                width: 25px;
+                height: 25px; 
+                position: relative;                  
+                color: white;
+                margin-left: -15px;
+                font-size: 0.8em;
+                font-weight: bold;
+                padding: 1px 1px 0px 1px;                                       
+                background-color: rgba(147, 86, 220, 255);
+                border-radius: 50%;
+            }
+            .icon-gray, .icon-indigo{
+                margin: $margin-icon-info;
+                color: gray;
+                font-size: 1.2em;
+            }        
+        }
+        .info:hover{
+            background-color: rgba(230, 230, 230, 0.75);
+            .fas{
+                color: rgba(147, 86, 220, 255);
+            }
+        }      
+    }
+}
+
+
 /* Entrée, Plat et Dessert */
 .sousmenu{
     width: 100%;
-    display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    animation: Apparition 1.5s both ease-in-out;/*apparition Entrée, plat, dessert*/
+    animation: Apparition 1.2s both ease-in-out;/*apparition Entrée, plat, dessert*/
     h2{
         text-align: center;
         text-transform: uppercase;
         margin-bottom: 25px;
+        span{
+            display: inline;
+            padding-bottom: $color-padding-bot-h2; /* padding soulignement 4lettres de h2*/
+            border: $color-underline-h2; /*soulign H2 color*/
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
     }
     .container{
         width: 99%;
@@ -1030,32 +1115,34 @@ h2{
 }
 /* Temps d'attente avant l'arrivée du proupe: Entrée, Plat, Dessert */
 .sousmenu:nth-child(1){
-    animation-delay: 0.3s;
+    animation-delay: 0.25s;
 }
 .sousmenu:nth-child(2){
-    animation-delay: 0.7s;
+    animation-delay: 0.5s;
 }
 .sousmenu:nth-child(3){
-    animation-delay: 1.2s;
+    animation-delay: 0.75s;
 }
 /* Mise en page pour chaque plat*/
 .plat{
     border: 0px solid transparent;
     display: flex;       
-    border-radius: 20px;
+    border-radius: 1.5em;
     cursor: pointer;                     
     line-height: 0.5em;
-    margin-bottom: 10px;
+    margin-bottom: 1.5em;
     color: #000;
-    padding: 0.4em 1em 0.4em 1em;
+    padding: 0.5em 1em 0.5em 1em;
     background-color: $couleur-backg-plat;
-    transition: all 500ms ease;
+    box-shadow: $box-shad-plat;
+    transition: all 900ms ease;
     .prix {    
         display: flex;
         align-items: flex-end;
         font-size: 1.3em;
+        font-weight: bold;
         height: auto;
-        margin-top: 4em;
+        margin-top: 1.1em;
         padding: 1.2em 1em 0em 0em; 
     }
     &_left{
@@ -1064,7 +1151,7 @@ h2{
         flex: 1;
         white-space: nowrap;
         .nom{
-            font-size: 1.2em;
+            font-size: 1.4em;
             padding: 0.5em 0em;
             white-space: nowrap;
             overflow: hidden;
@@ -1074,10 +1161,9 @@ h2{
             color: #000;
             margin-bottom: 0em;
             margin-top: 0.5em;
-
         }
         h5{
-            font-size: 1.3em;
+            font-size: 1.4em;
             padding: 0.5em 0em;
             margin-bottom: 0em;
             margin-top: 0em;
@@ -1109,7 +1195,7 @@ h2{
                 font-size: 0.7em;
                 align-items: center; 
                 justify-content: center;
-                margin: 0em -1.6em 0em 2em;               
+                margin: 0em -1.6em 0em 2.5em;               
                 display: flex;                
                 position: relative;                                                   
             }
@@ -1121,7 +1207,6 @@ h2{
     position: relative;
     margin: auto;
     .prix{
-        padding: 1.2em 1em 0em 0em;
         margin-right: 1.5em;
         margin-left: 1em;
     }
@@ -1129,7 +1214,7 @@ h2{
         display: flex;
         .fa-check{
             color: $color-tertiaire;
-            animation: 300ms petitecoche ease-in-out both;
+            animation: 400ms petitecoche ease-in-out both;
         }
     }
 }
@@ -1138,26 +1223,56 @@ h2{
 @keyframes petitecoche {
     0%{
         transform: rotate(0turn);
-    }
-    25%{
-        transform: rotate(0.25turn);
-    }
-    50%{
-        transform: rotate(0.5turn);
-    }
-    75% {
-        transform: rotate(0.75turn);
-    }       
+    }     
     100% {
         transform: rotate(1turn);
         opacity: 1;
     }
 }
 
+
+/* pied de page en desktop */
+.footer{
+    flex-direction: column;
+    background-color: $backg-footer;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: $padding-footer;
+    h2{
+        margin: auto;
+        font-size: 1.6em;
+        color: #fff;
+    }
+    .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        li{
+            list-style-type: none;           
+        }
+        li a{
+            color: #fff;
+            display: inline-block;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        li a:hover{     
+            text-decoration: underline;
+        }
+        .fas{
+            margin-right: 10px;
+            color: #fff;
+        }       
+    }
+}
+
+
 /* orientation paysage et portrait sur petits écrans */
 @media (orientation: landscape) {
     body {
       flex-direction: row;
+      background-color: #fff;
     }
 }
   
@@ -1165,5 +1280,6 @@ h2{
 @media (orientation: portrait) {
     body {
       flex-direction: column;
+      background-color: #fff;
     }
 }
