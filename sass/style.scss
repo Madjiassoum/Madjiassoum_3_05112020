@@ -10,6 +10,7 @@ $box-shad-info: 2px 5px 5px rgba(220, 220, 220, 1);//ombre li fonctionnement//
 $border-info: 0.3em rgba(225, 225, 225, 0.2);// bordure li fonctionnment//
 $padding-info: 10px 5px 10px 5px; //padding info de fonctionnement //
 $margin-icon-info: 2px 10px 0px 20px; //margin icon tonctionnement//
+$backg-info-hover: rgba(147, 86, 220, 0.25); //backg INFO au hover//
 $padding-footer: 1em 0em 1em 0em;// padding du footer//
 $backg-footer: rgba(53, 53, 53, 255); //Couleur pied de page//
 $padding-btn: 0.8em 2em 0.8em 2em; // padding texte du bouton//
@@ -30,7 +31,6 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
     }
     .contain-page{
         min-width: 320px;
-        height: 400px;
         margin: auto;  
         padding: 0px 0px 0px 0px;
         justify-content: center;
@@ -45,6 +45,13 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
             border-top-right-radius: 20px;
             border-top-left-radius: 20px;
             z-index: 66;
+            .contient-sousmenu{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+                margin: 0 auto;
+            }
             .divbtn{
                 margin-top: 2em;
                 margin-bottom: 2.5em;
@@ -85,7 +92,7 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
                     }
                     .prix{
                         margin-left: 20px;
-                        margin-top: 20px;
+                        margin-top: 25px;
                     }
                 }
             }
@@ -139,23 +146,21 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
 
         /*Titre logo */
         .header{
-            padding: 0px;
             width: 90%;
             display: flex;
-            margin: auto;
+            margin: 0 auto;
             justify-content: center;
-            align-items: center;
             img{
                 display: flex;
-                align-items: center;
                 object-fit: cover;
-                width: 40%;     
+                width: 200px;   
             }
         }
 
         /* Titre de la page d'accueil */
         .endroit{
             margin-bottom: 3em;
+            margin-top: 0px;
             background-color: $backg-endroi-restaurant;
             .search{
                 padding: 1em 0em;
@@ -229,7 +234,7 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
                     }
                 }
                 .info:hover{
-                    background-color: rgba(230, 230, 230, 0.75);                
+                    background-color: $backg-info-hover;                
                     .fas{
                         color: rgba(147, 86, 220, 255);
                     }
@@ -266,7 +271,8 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
                     position: relative;
                     .nouveau{
                         position: absolute;
-                        left: 80%;
+                        display: inline;
+                        right: 20px;
                         top: 30px;
                         color: darken($color-tertiaire, 30%);
                         background-color: darken($color-tertiaire, 0.5);
@@ -354,6 +360,7 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
         /* Zone en-tete d'accueil */
         .endroit{
             margin-bottom: 2em;
+            margin-top: 0px;
             flex-direction: column;
             background-color: $backg-endroi-restaurant;
             .search{
@@ -415,7 +422,7 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
                     }
                 }
                 .info:hover{
-                    background-color: rgba(230, 230, 230, 0.75);
+                    background-color: $backg-info-hover;
                     .fas{
                         color: rgba(147, 86, 220, 255);
                     }
@@ -435,14 +442,16 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
                     width: 40%;
                     margin-left: 2%;
                     margin-right: 2%;
+                    position: relative;
                     .nouveau{
-                        left: 75%;
-                        top: 50px;
+                        position: absolute;
+                        right: 20px;
+                        top: 35px;
                         color: darken($color-tertiaire, 30%);
                         background-color: darken($color-tertiaire, 0.5);
                         padding: 6px 10px;
                         border-radius: 3px;
-                        font-weight: bold;                       
+                        font-weight: bold;                     
                     }
                     .restau_titre{
                         .g-title{
@@ -515,6 +524,14 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
         /* contenaire du bouton Commander*/
         .restaurant{
             background-color: $backg-endroi-restaurant;
+            margin: 0 auto;
+            .contient-sousmenu{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+                margin: 0 auto;
+            }
             .divbtn{
                 margin-top: 2em;
                 margin-bottom: 2.5em;
@@ -528,6 +545,12 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
     
 
         .sousmenu{
+            width: 45%;
+            margin: 0 auto;
+            display: flex;
+            align-self: start;  
+            margin-bottom: 20px;
+            animation: Apparition 1.2s both ease-in-out;
             h2{
                 text-align: center;
                 text-transform: uppercase;
@@ -552,6 +575,7 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
                 }
                 .prix{
                     font-size: 1.3em;
+                    margin-top: 1.3em;
                 }
             }
         }
@@ -578,7 +602,13 @@ body{
         width: 100%;
         background-color: $backg-endroi-restaurant;
         margin-bottom: 0px;   
-        padding-bottom: 0px;    
+        padding-bottom: 0px;
+        .contient-sousmenu{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin: 0 auto;
+        }  
     }
 }
 
@@ -793,6 +823,7 @@ h2{
         flex-wrap: wrap;
         justify-content: center;
         .restau {
+            position: relative;
             width: 40%;
             justify-content: space-between;
             margin-right: 5%;
@@ -801,14 +832,15 @@ h2{
             padding-top: 0px;
             .nouveau{
                 display: inline;
-                position: relative;
-                left: 80%;
+                position: absolute;
+                right: 20px;
                 top: 20%;
                 font-weight: bold;
                 padding: 6px 10px;
                 border-radius: 3px;        
                 color: darken($color-tertiaire, 30%);
-                background-color: darken($color-tertiaire, 0.5);               
+                background-color: darken($color-tertiaire, 0.5); 
+                font-weight: bold;
             }      
             .image_menu{
                 img{
@@ -899,25 +931,24 @@ h2{
 /* photo menu sur chaque restaurant */
 .menu{
     display: flex;
-    margin-bottom: 10px; 
+    margin: auto;
+    margin-bottom: 0px; 
     img{
         display: block;
         height: 180px;
         object-fit: cover;
-        width: 98%;
-        margin: auto;        
+        width: 99%;
+        margin: 0 auto;        
     }
 }
 
 /* En-tete avec fleche pour aller sur page d'accueil*/
 .header{
     padding: 0px;
-    width: 90%;
-    height: 75px;
+    width: 95%;
     display: flex;
     margin: auto;
     justify-content: center;
-    align-items: center;
     a{
         text-decoration: none;
     }
@@ -932,11 +963,10 @@ h2{
     }
     img{
         display: flex;
-        margin: auto;
-        align-items: center;
+        margin: 0 auto;
         justify-content: center;
-        padding: 5px 2px;
-        width: 40%;
+        padding: 3px 2px;
+        width: 210px;
         object-fit: cover;
     }
 }
@@ -945,7 +975,8 @@ h2{
 .endroit{
     flex-direction: column;
     margin-bottom: 2em;
-    margin-top: 1.5em;
+    margin-top: 0px;    
+    margin: 0 auto;
     background-color: $backg-endroi-restaurant;
     h1 {
         text-align: center;
@@ -959,6 +990,7 @@ h2{
     .search{
         padding: 1.1em 0em;
         text-align: center;
+        margin-top: 0px;
         border-top: $backg-search-top;
         background-color: $backg-search;
         &_icon{
@@ -1064,7 +1096,7 @@ h2{
             }        
         }
         .info:hover{
-            background-color: rgba(230, 230, 230, 0.75);
+            background-color: $backg-info-hover;
             .fas{
                 color: rgba(147, 86, 220, 255);
             }
@@ -1075,10 +1107,13 @@ h2{
 
 /* Entrée, Plat et Dessert */
 .sousmenu{
-    width: 100%;
-    flex-direction: column;
+    width: 32%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; 
+    align-self: start;  
     margin-bottom: 20px;
-    animation: Apparition 1.2s both ease-in-out;/*apparition Entrée, plat, dessert*/
+    animation: Apparition 2s both ease-in;/*apparition Entrée, plat, dessert*/
     h2{
         text-align: center;
         text-transform: uppercase;
@@ -1106,7 +1141,7 @@ h2{
 @keyframes Apparition {
     0% {
         opacity: 0;
-        transform: translateY(25px);
+        transform: translateY(30px);
     }
     100% {
         opacity: 1;
@@ -1115,13 +1150,13 @@ h2{
 }
 /* Temps d'attente avant l'arrivée du proupe: Entrée, Plat, Dessert */
 .sousmenu:nth-child(1){
-    animation-delay: 0.25s;
+    animation-delay: 0.3s;
 }
 .sousmenu:nth-child(2){
-    animation-delay: 0.5s;
+    animation-delay: 0.8s;
 }
 .sousmenu:nth-child(3){
-    animation-delay: 0.75s;
+    animation-delay: 1.3s;
 }
 /* Mise en page pour chaque plat*/
 .plat{
@@ -1139,11 +1174,12 @@ h2{
     .prix {    
         display: flex;
         align-items: flex-end;
-        font-size: 1.3em;
+        font-size: 1.1em;
         font-weight: bold;
         height: auto;
-        margin-top: 1.1em;
-        padding: 1.2em 1em 0em 0em; 
+        margin-top: 1.4em;
+        padding: 1em 0em 0em 1em;
+        margin-right: -1.4em;
     }
     &_left{
         text-overflow: ellipsis;
@@ -1151,7 +1187,7 @@ h2{
         flex: 1;
         white-space: nowrap;
         .nom{
-            font-size: 1.4em;
+            font-size: 1.1em;
             padding: 0.5em 0em;
             white-space: nowrap;
             overflow: hidden;
@@ -1163,7 +1199,7 @@ h2{
             margin-top: 0.5em;
         }
         h5{
-            font-size: 1.4em;
+            font-size: 1.1em;
             padding: 0.5em 0em;
             margin-bottom: 0em;
             margin-top: 0em;
@@ -1185,7 +1221,7 @@ h2{
             margin: -0.5em -2em -0.5em 0em;         
             border-top-right-radius: 20px;
             border-bottom-right-radius: 20px;
-            background-color: $color-tertiaire;
+            background-color: $color-tertiaire;            
             .fa-check{          
                 background-color: white;                   
                 width: 20px;
@@ -1202,16 +1238,30 @@ h2{
         }
     }    
 }
+/*  Apparition sousmenu en groupe */
+@keyframes check-anim {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .plat:hover{
     opacity: 0.8;
     position: relative;
     margin: auto;
     .prix{
-        margin-right: 1.5em;
+        margin-right: 1.1em;
         margin-left: 1em;
+        animation: check-anim 200ms ease; //Animation du prix //
     }
     .check{
         display: flex;
+        animation: check-anim 250ms ease-in both; //Animation de check //
         .fa-check{
             color: $color-tertiaire;
             animation: 400ms petitecoche ease-in-out both;
