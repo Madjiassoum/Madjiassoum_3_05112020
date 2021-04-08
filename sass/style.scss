@@ -1,9 +1,13 @@
+@import "vars_et_keyframes/_vars.scss";
+@import "vars_et_keyframes/_keyframes";
+
 //Les VARIABLES UTILISEES DANS NOTRE PAGE// 
+/*
 $color-primaire: #9356DC; //1ere couleur //
 $color-secondaire: #ff79DA;//deuxieme couleur//
 $color-tertiaire: #99E2D0;//troisieme couleur//
 $fontfamily-body: 'roboto', century, 'sans-serif', Verdana;//police body roboto//
-$backg-endroi-restaurant: rgba(230, 230, 230, 0.75); //couleur fond restaurant//
+$backg-endroi-restaurant: rgb(230, 230, 230); //couleur fond restaurant//
 $backg-search: rgba(225, 225, 225, 1); // backgr-color de search//
 $backg-color-info: rgba(230, 230, 230, 0.6); //couleur backg fonctionnement//
 $box-shad-info: 2px 5px 5px rgba(220, 220, 220, 1);//ombre li fonctionnement//
@@ -21,7 +25,7 @@ $box-shad-plat: 3px 3px 2px rgba(220, 220, 220, 50); //ombre bordure plat//
 $backg-search-top: 5px solid rgba(220, 220, 220, 240); //Bordure dessus Paris Marseille//
 $color-padding-bot-h2: 8px; // padding soulignement 4lettres de h2//
 $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
-
+*/
 /* Les mobiles */
 @media screen and (max-width: 599px){
     body{        
@@ -40,10 +44,10 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
         /* Conteneur Entrée, Plat et dessert*/
         .restaurant {
             width: 100%;
-            margin-top: -8px;
+            margin-top: -20px;
             background-color: $backg-endroi-restaurant;
-            border-top-right-radius: 20px;
-            border-top-left-radius: 20px;
+            border-top-right-radius: 40px;
+            border-top-left-radius: 40px;
             z-index: 66;
             .contient-sousmenu{
                 display: flex;
@@ -273,7 +277,7 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
                         position: absolute;
                         display: inline;
                         right: 20px;
-                        top: 30px;
+                        top: 25px;
                         color: darken($color-tertiaire, 30%);
                         background-color: darken($color-tertiaire, 0.5);
                         padding: 6px 10px;
@@ -300,9 +304,9 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
                             }                         
                         }
                         .btn_white{
-                            margin-top: 2.2em;
                             display: flex;
-                            justify-content: flex-end;
+                            align-self: center;
+                            justify-content: center;
                         }
                     }                            
                 }
@@ -461,12 +465,11 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
                                 font-family: $fontfamily-body;
                             }                         
                         }
-                        .btn_white{
-                            margin-top: 2em;
-                            padding: 0px 0px;
-                            display: flex;
+                        .btn_white{                        
+                            display: flex;                            
+                            justify-content: flex-end;
                             align-items: center;
-                            justify-content: flex-end;                            
+                            padding: 0px 0px;
                         }
                     }                            
                 }
@@ -602,7 +605,10 @@ body{
         width: 100%;
         background-color: $backg-endroi-restaurant;
         margin-bottom: 0px;   
+        margin-top: -28px;
         padding-bottom: 0px;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
         .contient-sousmenu{
             display: flex;
             flex-direction: row;
@@ -639,6 +645,7 @@ body{
         animation: 2.5s spin ease-in-out both;
     }
     /* keyframes du Loading-spinner */
+    /*
     @keyframes spin {
         5% {
             opacity: 1;
@@ -657,7 +664,7 @@ body{
             display: none;
         }
     }
-
+    */
     /*.spinner-end */
     .loading-dots > .dot1{
         width: 3rem;
@@ -667,6 +674,7 @@ body{
         display: inline-block;
         animation: 4.5s bounce ease-in-out both;
     }
+    /*
     @keyframes bounce {
         0%{
             transform: scale(0);
@@ -698,6 +706,7 @@ body{
             display: none;
         }
     }
+    */
 }
 
 
@@ -708,6 +717,7 @@ body{
 }
 
 /* keyframes qui fait apparaitre la page d'accueil après le loading-spinner*/
+/*
 @keyframes affichagepage {
     0% {
         opacity: 0.2;
@@ -725,7 +735,7 @@ body{
         opacity: 1;
     }
 } 
-
+*/
 .header, .endroit, .titre, .fonction, .main-menu, .footer, .menu, .sousmenu, .divbtn {
     width: 100%;
     margin: 10px 0px 10px 0px;
@@ -745,10 +755,10 @@ h2{
     border-top-left-radius: 25px;
     width: 100%;
     display: flex;
-    padding-top: 10px;
+    padding-top: 15px;
     margin-bottom: 2em;
     &_left{
-        width: 80%;
+        width: 90%;
         margin: 0.5em 0em 0.5em 1.5em;
         padding: 0;
         font-size: 1.7em;
@@ -834,7 +844,7 @@ h2{
                 display: inline;
                 position: absolute;
                 right: 20px;
-                top: 20%;
+                top: 12%;
                 font-weight: bold;
                 padding: 6px 10px;
                 border-radius: 3px;        
@@ -878,17 +888,16 @@ h2{
             }
         }
         .btn_white {
-            top: 5px;
-            height: 2em;
+            height: 100%;
             border: transparent 0px solid;
             padding: 0;
-            display:flex;
-            align-items:center;
-            justify-content:center;
+            display: flex;
+            align-self: center;
+            justify-content: center;
             cursor: pointer;
             position: relative;
             background-color: transparent;
-            margin-left: 1em;
+            margin-right: 0em;
             .fas{
                 display: none; 
             }
@@ -919,7 +928,9 @@ h2{
         }        
     }
 }
+
 /* remplissage du background de heart */
+/*
 @keyframes remplissage-heart {
     0% {
         transform: scaleY(0);     
@@ -928,6 +939,7 @@ h2{
         transform: scaleY(1);
     }
 }
+*/
 /* photo menu sur chaque restaurant */
 .menu{
     display: flex;
@@ -1138,6 +1150,7 @@ h2{
 }
 
 /*  Apparition sousmenu en groupe */
+/*
 @keyframes Apparition {
     0% {
         opacity: 0;
@@ -1148,8 +1161,9 @@ h2{
         transform: translateY(0);
     }
 }
+*/
 /* Temps d'attente avant l'arrivée du proupe: Entrée, Plat, Dessert */
-.sousmenu:nth-child(1){
+/*.sousmenu:nth-child(1){
     animation-delay: 0.3s;
 }
 .sousmenu:nth-child(2){
@@ -1158,6 +1172,8 @@ h2{
 .sousmenu:nth-child(3){
     animation-delay: 1.3s;
 }
+
+*/
 /* Mise en page pour chaque plat*/
 .plat{
     border: 0px solid transparent;
@@ -1238,7 +1254,9 @@ h2{
         }
     }    
 }
+
 /*  Apparition sousmenu en groupe */
+/*
 @keyframes check-anim {
     0% {
         opacity: 0;
@@ -1249,6 +1267,7 @@ h2{
         transform: translateX(0);
     }
 }
+*/
 
 .plat:hover{
     opacity: 0.8;
@@ -1270,6 +1289,7 @@ h2{
 }
 
 /* Animation de l'icone .fa-check de validation de menu */
+/*
 @keyframes petitecoche {
     0%{
         transform: rotate(0turn);
@@ -1280,7 +1300,7 @@ h2{
     }
 }
 
-
+*/
 /* pied de page en desktop */
 .footer{
     flex-direction: column;
@@ -1316,7 +1336,6 @@ h2{
         }       
     }
 }
-
 
 /* orientation paysage et portrait sur petits écrans */
 @media (orientation: landscape) {
