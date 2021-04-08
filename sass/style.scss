@@ -1,31 +1,7 @@
 @import "vars_et_keyframes/_vars.scss";
+@import "vars_et_keyframes/mixins.scss";
 @import "vars_et_keyframes/_keyframes";
 
-//Les VARIABLES UTILISEES DANS NOTRE PAGE// 
-/*
-$color-primaire: #9356DC; //1ere couleur //
-$color-secondaire: #ff79DA;//deuxieme couleur//
-$color-tertiaire: #99E2D0;//troisieme couleur//
-$fontfamily-body: 'roboto', century, 'sans-serif', Verdana;//police body roboto//
-$backg-endroi-restaurant: rgb(230, 230, 230); //couleur fond restaurant//
-$backg-search: rgba(225, 225, 225, 1); // backgr-color de search//
-$backg-color-info: rgba(230, 230, 230, 0.6); //couleur backg fonctionnement//
-$box-shad-info: 2px 5px 5px rgba(220, 220, 220, 1);//ombre li fonctionnement//
-$border-info: 0.3em rgba(225, 225, 225, 0.2);// bordure li fonctionnment//
-$padding-info: 10px 5px 10px 5px; //padding info de fonctionnement //
-$margin-icon-info: 2px 10px 0px 20px; //margin icon tonctionnement//
-$backg-info-hover: rgba(147, 86, 220, 0.25); //backg INFO au hover//
-$padding-footer: 1em 0em 1em 0em;// padding du footer//
-$backg-footer: rgba(53, 53, 53, 255); //Couleur pied de page//
-$padding-btn: 0.8em 2em 0.8em 2em; // padding texte du bouton//
-$shadow-bouton: 2px 3px 3px $color-tertiaire;// ombre des box boutons//
-$shadow-txt: 2px 2px 2px rgb(45, 32, 77); //ombre de textes des boutons//
-$couleur-backg-plat: rgba(255, 255, 255, 255); //couleur fond//
-$box-shad-plat: 3px 3px 2px rgba(220, 220, 220, 50); //ombre bordure plat//
-$backg-search-top: 5px solid rgba(220, 220, 220, 240); //Bordure dessus Paris Marseille//
-$color-padding-bot-h2: 8px; // padding soulignement 4lettres de h2//
-$color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
-*/
 /* Les mobiles */
 @media screen and (max-width: 599px){
     body{        
@@ -46,8 +22,7 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
             width: 100%;
             margin-top: -20px;
             background-color: $backg-endroi-restaurant;
-            border-top-right-radius: 40px;
-            border-top-left-radius: 40px;
+            @include border_top_restaurant;
             z-index: 66;
             .contient-sousmenu{
                 display: flex;
@@ -81,6 +56,7 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
                     border-right: none;
                 }
             }
+
             .container{
                 width: 98%;
                 .plat{
@@ -102,19 +78,17 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
             }
         }
         .menu{
-            margin-bottom: 10px;
             z-index: 0;
+            margin-top: 0px;
             img{
                 width: 99%;
                 margin-bottom: -5px;
-                z-index: -20;
             }
         }
 
         /* Titre chaque restaurant en mobile */
         .titre{
-            border-top-right-radius: 20px;
-            border-top-left-radius: 20px;
+            @include border_top_restaurant;
             position: relative;
             width: 98%;
             display: flex;
@@ -222,8 +196,7 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
                     .style-type{
                         margin-left: -20px;
                         position: relative;
-                    }
-                    
+                    }                    
                     .icon-gray, .icon-indigo{
                         margin: $margin-icon-info;
                         color: gray;
@@ -298,7 +271,6 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
                     .restau_titre{
                         .g-title{
                             padding: 0.8em 0em;   
-
                             h3{
                                 font-family: $fontfamily-body;
                             }                         
@@ -312,7 +284,6 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
                 }
             }
         }
-
 
         /* Pied de page en mobile */
         .footer{
@@ -361,18 +332,21 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
         box-sizing: border-box;
         max-width: 1024px;
 
-        /* Zone en-tete d'accueil */
+        /* Section en-tete d'accueil */
         .endroit{
             margin-bottom: 2em;
             margin-top: 0px;
             flex-direction: column;
             background-color: $backg-endroi-restaurant;
+
+            /*Zone de recherche ville */
             .search{
                 border-top: $backg-search-top;
                 background-color: $backg-search;
                 padding: 1em 0em;
                 margin-bottom: 2em;  
             }
+            /*Titre H1 de la page */
             h1{
                 text-align: center;
                 letter-spacing: 0.2em;
@@ -383,6 +357,8 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
                 font-size: 1.2em;
                 letter-spacing: 0.1em;
             }
+
+            /* Bouton: Explorer nos restaurants */
             .divbtn{
                 .btn {
                     padding: $padding-btn;
@@ -410,8 +386,7 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
                     box-shadow: $box-shad-info;
                     .style-type{
                         margin-left: -15px;
-                    }
-                    
+                    }                    
                     .icon-gray, .icon-indigo{
                         margin: $margin-icon-info;
                         color: gray;
@@ -459,8 +434,7 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
                     }
                     .restau_titre{
                         .g-title{
-                            padding: 0.8em 0em;   
-
+                            padding: 0.8em 0em; 
                             h3{
                                 font-family: $fontfamily-body;
                             }                         
@@ -506,14 +480,22 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
                 }
             }
         }
+        .menu{
+            margin-top: 0px;
+            img{
+                z-index: -11;
+            }
+        }
 
         /* Titre de chaque restaurant */
         .titre{
+            @include border_top_restaurant;
             h1{
                 font-size: 2em;
                 font-family: 'shrikhand';
                 margin: 0px 0px 0px 20px;
             }
+            /* Coeur à droite du H1*/
             .btn_white{
                 align-items: center;
                 height: 1.1em;
@@ -528,6 +510,9 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
         .restaurant{
             background-color: $backg-endroi-restaurant;
             margin: 0 auto;
+            margin-top: -20px;
+            @include border_top_restaurant;
+            z-index: 66;
             .contient-sousmenu{
                 display: flex;
                 flex-direction: row;
@@ -544,8 +529,7 @@ $color-underline-h2: 3px rgba(28, 156, 96, 0.877) solid; //soulign H2 color//
                     border-radius: 1.5em;
                 }
             }
-        }
-    
+        }    
 
         .sousmenu{
             width: 45%;
@@ -605,10 +589,9 @@ body{
         width: 100%;
         background-color: $backg-endroi-restaurant;
         margin-bottom: 0px;   
-        margin-top: -28px;
+        margin-top: -20px;
         padding-bottom: 0px;
-        border-top-right-radius: 30px;
-        border-top-left-radius: 30px;
+        @include border_top_restaurant;
         .contient-sousmenu{
             display: flex;
             flex-direction: row;
@@ -644,27 +627,7 @@ body{
         border-top-color: #Af00;
         animation: 2.5s spin ease-in-out both;
     }
-    /* keyframes du Loading-spinner */
-    /*
-    @keyframes spin {
-        5% {
-            opacity: 1;
-        }
-        25% {
-            transform: rotate(2turn);
-        }
-        
-        90% {
-            transform: rotate(3turn);
-            opacity: 0;
-        }
-        100% {
-            transform: rotate(0turn);
-            opacity: 0;
-            display: none;
-        }
-    }
-    */
+
     /*.spinner-end */
     .loading-dots > .dot1{
         width: 3rem;
@@ -674,39 +637,6 @@ body{
         display: inline-block;
         animation: 4.5s bounce ease-in-out both;
     }
-    /*
-    @keyframes bounce {
-        0%{
-            transform: scale(0);
-        }
-        25%{
-            transform: scale(1);
-        }
-        50%{
-            transform: scale(2);
-        }
-        70%{
-            transform: scale(2);
-            color: $color-primaire;
-            text-shadow: $shadow-txt;
-        } 
-        80%{
-            transform: scale(1.5);
-            text-shadow: $shadow-txt; 
-            color: $color-secondaire;           
-        } 
-        95%{
-            transform: scale(1);
-            text-shadow: $shadow-txt; 
-            color: $color-tertiaire; 
-
-        }    
-        100%{
-            transform: scale(0);
-            display: none;
-        }
-    }
-    */
 }
 
 
@@ -716,26 +646,6 @@ body{
     animation: affichagepage 4s 1s both;
 }
 
-/* keyframes qui fait apparaitre la page d'accueil après le loading-spinner*/
-/*
-@keyframes affichagepage {
-    0% {
-        opacity: 0.2;
-    }
-    25%{
-        opacity: 0.4;
-    }
-    50% {
-        opacity: 0.8;
-    }
-    75%{
-        opacity: 0.9;
-    }    
-    100% {
-        opacity: 1;
-    }
-} 
-*/
 .header, .endroit, .titre, .fonction, .main-menu, .footer, .menu, .sousmenu, .divbtn {
     width: 100%;
     margin: 10px 0px 10px 0px;
@@ -751,11 +661,10 @@ h2{
 
 /* Titre chaque restaurant en desktop */
 .titre{
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
+    @include border_top_restaurant;
     width: 100%;
     display: flex;
-    padding-top: 15px;
+    padding-top: 20px;
     margin-bottom: 2em;
     &_left{
         width: 90%;
@@ -763,7 +672,6 @@ h2{
         padding: 0;
         font-size: 1.7em;
         font-family: 'shrikhand';
-
     }
 
     /* bouton en forme de coeur à droite du titre Desktop */
@@ -787,12 +695,8 @@ h2{
         border: transparent;             
         .fas{
             display: flex;
-            background: -webkit-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
-            background: -moz-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
-            background: -o-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
-            background: linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
-            -webkit-background-clip: text;  /* transform icon en text*/
-            -webkit-text-fill-color: transparent;/* transform icon en transparent*/
+            @include backg_color_btn;
+            @include transform_icon_en_texte;           
             animation: 600ms remplissage-heart ease-in-out both;
         }
         .far{
@@ -802,12 +706,8 @@ h2{
     .btn_white:active{
        .fas{
            display: flex;
-           background: -webkit-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
-           background: -moz-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
-           background: -o-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
-           background: linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
-           -webkit-background-clip: text;  /* transform icon en text*/
-           -webkit-text-fill-color: transparent;/* transform icon en transparent*/
+           @include backg_color_btn;
+           @include transform_icon_en_texte;
            animation: 600ms remplissage-heart ease-in-out both;
        } 
        .far{
@@ -911,12 +811,8 @@ h2{
             .fas{
                 display: flex;
                 font-size: 1.6em;
-                background: -webkit-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
-                background: -moz-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
-                background: -o-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
-                background: linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
+                @include backg_color_btn;
+                @include transform_icon_en_texte;
                 transform: scaleY(0);
                 transform-origin: bottom;
                 animation-fill-mode: backwards;
@@ -929,17 +825,6 @@ h2{
     }
 }
 
-/* remplissage du background de heart */
-/*
-@keyframes remplissage-heart {
-    0% {
-        transform: scaleY(0);     
-    }    
-    100% {
-        transform: scaleY(1);
-    }
-}
-*/
 /* photo menu sur chaque restaurant */
 .menu{
     display: flex;
@@ -950,7 +835,8 @@ h2{
         height: 180px;
         object-fit: cover;
         width: 99%;
-        margin: 0 auto;        
+        margin: 0 auto;     
+        z-index: -11;   
     }
 }
 
@@ -1038,10 +924,8 @@ h2{
         font-size: 1em;
         margin-bottom: 2.5em;
         padding: $padding-btn;
-        background: -webkit-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
-        background: -moz-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
-        background: -o-linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
-        background: linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);   
+        @include backg_color_btn;
+
     }
     .btn:hover {
         opacity: 0.7;      
@@ -1116,7 +1000,6 @@ h2{
     }
 }
 
-
 /* Entrée, Plat et Dessert */
 .sousmenu{
     width: 32%;
@@ -1149,31 +1032,6 @@ h2{
     }
 }
 
-/*  Apparition sousmenu en groupe */
-/*
-@keyframes Apparition {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-*/
-/* Temps d'attente avant l'arrivée du proupe: Entrée, Plat, Dessert */
-/*.sousmenu:nth-child(1){
-    animation-delay: 0.3s;
-}
-.sousmenu:nth-child(2){
-    animation-delay: 0.8s;
-}
-.sousmenu:nth-child(3){
-    animation-delay: 1.3s;
-}
-
-*/
 /* Mise en page pour chaque plat*/
 .plat{
     border: 0px solid transparent;
@@ -1198,16 +1056,12 @@ h2{
         margin-right: -1.4em;
     }
     &_left{
-        text-overflow: ellipsis;
-        overflow: hidden;
         flex: 1;
-        white-space: nowrap;
+        @include points_suspensions;
         .nom{
             font-size: 1.1em;
             padding: 0.5em 0em;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            @include points_suspensions;
             align-items: flex-start;
             justify-content: flex-start;
             color: #000;
@@ -1219,9 +1073,7 @@ h2{
             padding: 0.5em 0em;
             margin-bottom: 0em;
             margin-top: 0em;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            @include points_suspensions;
         }    
     }
 
@@ -1255,20 +1107,6 @@ h2{
     }    
 }
 
-/*  Apparition sousmenu en groupe */
-/*
-@keyframes check-anim {
-    0% {
-        opacity: 0;
-        transform: translateX(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-*/
-
 .plat:hover{
     opacity: 0.8;
     position: relative;
@@ -1288,19 +1126,6 @@ h2{
     }
 }
 
-/* Animation de l'icone .fa-check de validation de menu */
-/*
-@keyframes petitecoche {
-    0%{
-        transform: rotate(0turn);
-    }     
-    100% {
-        transform: rotate(1turn);
-        opacity: 1;
-    }
-}
-
-*/
 /* pied de page en desktop */
 .footer{
     flex-direction: column;

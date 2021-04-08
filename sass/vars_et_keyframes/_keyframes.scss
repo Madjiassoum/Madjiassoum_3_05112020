@@ -1,6 +1,5 @@
-
-
- /* keyframes du Loading-spinner */
+//keyframes du Loading-spinner //
+ //animation: 2.5s spin ease-in-out both;//
  @keyframes spin {
     5% {
         opacity: 1;
@@ -20,6 +19,8 @@
     }
 }
 
+//Animation ballon Loader-Spinner gonflé, disparait progressivement//
+//animation: 4.5s bounce ease-in-out both;
 @keyframes bounce {
     0%{
         transform: scale(0);
@@ -52,7 +53,8 @@
     }
 }
 
-/* keyframes qui fait apparaitre la page d'accueil après le loading-spinner*/
+// keyframes qui fait apparaitre la page d'accueil après le loading-spinner//
+//animation: affichagepage 4s 1s both;
 @keyframes affichagepage {
     0% {
         opacity: 0.2;
@@ -72,7 +74,8 @@
 } 
 
 
-/* remplissage du background de heart */
+// remplissage du background de heart //
+//animation: 600ms remplissage-heart ease-in-out both;
 @keyframes remplissage-heart {
     0% {
         transform: scaleY(0);     
@@ -84,7 +87,8 @@
 
 
 
-/*  Apparition sousmenu en groupe */
+//  Apparition sousmenu en groupe //
+//animation: Apparition 2s both ease-in;/*apparition Entrée, plat, dessert//
 @keyframes Apparition {
     0% {
         opacity: 0;
@@ -95,7 +99,7 @@
         transform: translateY(0);
     }
 }
-/* Temps d'attente avant l'arrivée du proupe: Entrée, Plat, Dessert */
+// Temps d'attente avant l'arrivée du proupe: Entrée, Plat, Dessert //
 .sousmenu:nth-child(1){
     animation-delay: 0.3s;
 }
@@ -106,7 +110,8 @@
     animation-delay: 1.3s;
 }
 
-/*  Apparition sousmenu en groupe */
+//  Apparition sousmenu en groupe //
+// animation: check-anim 250ms ease-in both; //Animation de check //
 @keyframes check-anim {
     0% {
         opacity: 0;
@@ -119,7 +124,9 @@
 }
 
 
-/* Animation de l'icone .fa-check de validation de menu */
+// Animation de l'icone .fa-check de validation de menu //
+//animation: 400ms petitecoche ease-in-out both; de fa-check//
+
 @keyframes petitecoche {
     0%{
         transform: rotate(0turn);
