@@ -350,8 +350,8 @@
   .contain-page .sousmenu .container .plat .nom {
     font-size: 1.1em;
   }
-  .contain-page .sousmenu .container .plat h5 {
-    font-size: 1.1em;
+  .contain-page .sousmenu .container .plat h3 {
+    font-size: 1em;
   }
   .contain-page .sousmenu .container .plat .prix {
     margin-left: 20px;
@@ -471,9 +471,15 @@
     font-size: 1.5em;
     margin-left: 2em;
   }
+  .contain-page .fonction .container {
+    width: 95%;
+    padding: 0;
+  }
   .contain-page .fonction .container .info {
+    position: relative;
     width: 90%;
-    margin: auto;
+    margin-left: 0;
+    margin-right: 0;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px 5px 10px 5px;
@@ -682,21 +688,45 @@
     padding: 0.8em 2em 0.8em 2em;
     margin-bottom: 2em;
   }
+  .contain-page .fonction {
+    margin: 0px;
+  }
   .contain-page .fonction h2 {
     text-align: center;
     font-size: 1.5em;
   }
-  .contain-page .fonction .container .info {
-    width: 300px;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 10px 5px 10px 5px;
-    background-color: rgba(230, 230, 230, 0.6);
-    border: 0.3em rgba(225, 225, 225, 0.2);
+  .contain-page .fonction .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 95%;
+  }
+  .contain-page .fonction .container .info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 5%;
+    border-radius: 20px;
+    padding: 10px 5px 10px 5px;
+    margin-bottom: 15px;
+    list-style-type: none;
+    width: 300px;
+    margin: auto;
+    margin-top: 10px;
+    border: 0.3em rgba(225, 225, 225, 0.2);
+    background-color: rgba(230, 230, 230, 0.6);
     -webkit-box-shadow: 2px 5px 5px gainsboro;
             box-shadow: 2px 5px 5px gainsboro;
   }
@@ -883,8 +913,8 @@
     -webkit-box-shadow: 3px 3px 2px gainsboro;
             box-shadow: 3px 3px 2px gainsboro;
   }
-  .contain-page .sousmenu .plat_left h5 {
-    font-size: 1.3em;
+  .contain-page .sousmenu .plat_left h3 {
+    font-size: 1em;
     padding: 0.5em 0em;
   }
   .contain-page .sousmenu .plat_left p {
@@ -948,7 +978,7 @@ body {
   /*.spinner-end */
 }
 
-#wrapper h4 {
+#wrapper p {
   margin: auto;
   text-align: center;
   font: 2em verdana bold;
@@ -1405,6 +1435,7 @@ h2 {
 }
 
 .fonction .container {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1417,6 +1448,10 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 15px;
+  margin: auto;
 }
 
 .fonction .container .info {
@@ -1590,7 +1625,7 @@ h2 {
   margin-top: 0.5em;
 }
 
-.plat_left h5 {
+.plat_left h3 {
   font-size: 1.1em;
   padding: 0.5em 0em;
   margin-bottom: 0em;

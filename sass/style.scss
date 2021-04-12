@@ -67,8 +67,8 @@
                     .nom{
                         font-size: 1.1em;
                     }
-                    h5{
-                        font-size: 1.1em;
+                    h3{
+                        font-size: 1em;
                     }
                     .prix{
                         margin-left: 20px;
@@ -182,10 +182,14 @@
                 font-size: 1.5em;
                 margin-left: 2em;
             }
-            .container{           
+            .container{  
+                width: 95%;
+                padding: 0;      
                 .info{
+                    position: relative;
                     width: 90%;
-                    margin: auto;
+                    margin-left: 0;
+                    margin-right: 0;
                     margin-top: 10px;
                     margin-bottom: 10px;
                     padding: $padding-info;
@@ -369,21 +373,32 @@
 
         /*Fonctionnement Accueil */
         .fonction{
+            margin: 0px;
             h2{
                 text-align: center;
                 font-size: 1.5em;
             }
-            .container{           
+            .container{  
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center; 
+                width: 95%;
                 .info{
+                    display: flex;
+                    align-items: center;
+                    margin-right: 5%;
+                    border-radius: 20px;
+                    padding: $padding-info;       
+                    margin-bottom: 15px;           
+                    list-style-type: none;
                     width: 300px;
                     margin: auto;
                     margin-top: 10px;
-                    margin-bottom: 10px;
-                    padding: $padding-info;
-                    background-color: $backg-color-info;
                     border: $border-info;
-                    display: flex;
+                    background-color: $backg-color-info;                    
                     box-shadow: $box-shad-info;
+
                     .style-type{
                         margin-left: -15px;
                     }                    
@@ -552,8 +567,8 @@
             }
             .plat{
                 box-shadow: $box-shad-plat;
-                &_left h5{
-                    font-size: 1.3em; 
+                &_left h3{
+                    font-size: 1em; 
                     padding: 0.5em 0em;     
                 }
                 &_left p{
@@ -609,7 +624,7 @@ body{
     text-align: center;
     color: blue;
     opacity: 1;
-    h4{
+    p{
         margin: auto;
         text-align: center;
         font: 2em verdana bold;
@@ -944,10 +959,16 @@ h2{
         font-size: 1.6em;
     }
     .container{
+        width: 100%;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;      
+        justify-content: center;  
+        padding-left: 0;
+        padding-right: 0; 
+        padding-bottom: 15px;
+        margin: auto;
+
         .info{
             display: flex;
             align-items: center;
@@ -1068,7 +1089,7 @@ h2{
             margin-bottom: 0em;
             margin-top: 0.5em;
         }
-        h5{
+        h3{
             font-size: 1.1em;
             padding: 0.5em 0em;
             margin-bottom: 0em;
